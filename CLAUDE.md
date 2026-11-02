@@ -137,6 +137,8 @@ needed (it is not wired up for this course yet — `COURSE` in that script is la
   and are not to be hand-synced. The divergence: Coding 101 was added as Week 2, pushing web coding
   to Week 3 (where Graphic Design 101 joins it) and context to Week 4. Every milestone D1–D6 and all
   four guest-lecture weeks kept their proposed weeks.
+- **Boilerplate re-synced to laar61400 verbatim (Nov 2026)**, incl. its Public Safety block and site footer,
+  which this copy had lost. Only the grade-breakdown weights and the two substitutions below differ.
 - **All policy prose is laar61400's, verbatim** — attendance, academic integrity, incompletes,
   civility, electronic devices, grading criteria, the grade scale and its footnote, support
   resources, Support of Program Mission, and the Agentic AI — Course Stance block. Do not write new
