@@ -5,7 +5,7 @@ under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Wo
 
 ## From the syllabus (`index.html`, Week 06 row)
 - Topic: Said it three times: turn a repeated instruction into a skill the agent runs on its own; cloud sessions, started from the Claude app or the web, that work on your GitHub repository while your laptop is closed; branches; how a software team uses pull requests, review and approval, and which of those steps a solo developer can skip; comparing a branch with main and deciding when to merge
-- Due: one skill + a third project published through it, built in a cloud session on a branch, compared with main and merged, tagged `week-06`.
+- Due: one task done in a cloud session started from your phone, on a branch, compared with main and merged, tagged `week-06`. A skill is taught but optional; not every project needs one.
 - No lecture this week.
 
 ## Content, in class order
