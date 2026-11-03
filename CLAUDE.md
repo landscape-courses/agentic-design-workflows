@@ -36,7 +36,8 @@ Hand-authored static HTML, no build step. Keep it that way.
 ## Workshop page rules (from zihao-site WF conventions)
 - Layout: `<div class="wf-wrap wf-doc">` plus `wf-progress.js` after `nav.js`. Every step needs a
   `.wf-step-head` to get a done check; a `.wf-step` without one is a session divider.
-- Weeks and dates live only in `index.html`. First spec chip is Length ("2 sessions"); parts are
+- Labels are weeks, one scheme for everything: workshop header chip `WEEK NN`, nav number = week,
+  git tag `week-NN`. Dates live only in `index.html`. First spec chip is Length ("2 sessions"); parts are
   labeled Session 1, Session 2. A Due chip is the one date a page may repeat; omit it until the
   Spring 2027 calendar is set.
 - `.wf-objectives`: between spec strip and assignment, one to three short `<li>` phrases, each
@@ -115,26 +116,29 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
 `index.html` are copied verbatim from laar61400's logistics grid.
 
 - Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
-- `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, Claude desktop's Code tab
+- `github-setup.html` (Week 01 chip, "Your First Repository") — Week 1. GitHub account, Claude desktop's Code tab
   installs Git and the GitHub CLI, one terminal step (`gh auth login`, the step the agent cannot do;
   students do not install terminal Claude Code, the instructor demos it), then Claude makes and pushes `username.github.io` (the repo name that
-  gives a site at the root of the student's GitHub address, which outlives the course), then tags it `ws01`. Sets the submission
-  rule: every milestone is a Git tag (`D1`…`D10`) on the student's public repo; the tagged commit
-  is the submission. Resubmit = new suffixed tag (`D3-r1`), never a moved tag; push time is the timestamp. Stated once in `index.html` Assignments ("Submission").
-- `folders-and-claude.html` (WS02, "Folders and Claude") — Week 2, adapted from the Agents in
+  gives a site at the root of the student's GitHub address, which outlives the course), then tags it `week-01`. Sets the submission
+  rule: one graded milestone every week, tagged `week-01`…`week-14` on the repo that week's work is in
+  (the site through Week 7, the workflow repo from Week 8); the tagged commit is the submission. The
+  practice is at least one Claude session a week, pushed and tagged. Resubmit = new suffixed tag
+  (`week-03-r1`), never a moved tag; push time is the timestamp. Weeks 7 and 14 are graded on criteria,
+  the rest complete / incomplete. Stated once in `index.html` Assignments ("Submission").
+- `folders-and-claude.html` (Week 02 chip, "Folders and Claude") — Week 2, adapted from the Agents in
   Practice talk's "context through folder structure" part and its Try-Context guide. `_source/` →
   CLAUDE.md by interview → `tasks/` → a fresh session does the task → push → GitHub Pages turned on
-  by hand in Settings → tag `D1`. Every student has a live bio page by the end of Week 2. The
+  by hand in Settings → tag `week-02`. Every student has a live bio page by the end of Week 2. The
   `tasks/` folder replaces the old BUILDSPEC milestones for both the site and the Part II project.
-- `folder-audit.html` (WS03, "Auditing the Folder") — Week 7, the midterm transition, adapted from the
+- `folder-audit.html` (Week 07 chip, "Auditing the Folder") — Week 7, the midterm transition, adapted from the
   Agents in Practice talk's "context through folder structure" part and Try-Context step C3. Fresh session
   says what it thinks the project is → student reads CLAUDE.md → Claude audits CLAUDE.md and the design
   system (proposes, applies nothing until approved) → review the cuts → clean `tasks/` → ask again → a
-  Part II project page holding the proposal → tag `D6`. Wraps up the site so students can keep it on
-  their own; the workflow audit itself is D7, in its own repository.
-- `coding-101.html` (WS04, "Reading a Script") — Week 9, mid-semester, **six steps
+  Part II project page holding the proposal → tag `week-07`. Wraps up the site so students can keep it on
+  their own; the workflow audit itself is the Week 8 milestone, in its own repository.
+- `coding-101.html` (Week 09 chip, "Reading a Script") — Week 9, mid-semester, **six steps
   in Grasshopper**: an input is a variable → a loop over a List-access input → choose, and the 8.33
-  trap → write the spec → read what came back → check before you bake. Header chip is `WS04`.
+  trap → write the spec → read what came back → check before you bake. Header chip is `WEEK 09`.
   Carries no dates; the one deliverable is named in the `.wf-outcome` box.
   - The intro lists the **five moves**; `index.html`'s Week 9 row names them too. Keep both in sync.
   - **Every code block is copy-paste ready**, because students copy from the page rather than
@@ -162,9 +166,9 @@ needed (it is not wired up for this course yet — `COURSE` in that script is la
   `.syllabus-body` label between them.
 - `_course/proposal.md` in the factory is the **frozen record of what was submitted** (Sep 2026).
   This page is the source of truth for the schedule going forward; the two have diverged on purpose
-  and are not to be hand-synced. The divergence (Nov 2026 rework): Week 2 is Folders and Claude with the site live, D6 is the midterm transition (site audited, Part II project page with the proposal; Workshop 03),
-  the workflow audit moved to D7 (a new workflow repository), BUILDSPEC milestones became tasks folders, and Reading a Script moved to Week 9. Earlier: Coding 101 was added as Week 2, pushing web coding
-  to Week 3 (where Graphic Design 101 joins it) and context to Week 4. Every milestone D1–D6
+  and are not to be hand-synced. The divergence (Nov 2026 rework): Week 2 is Folders and Claude with the site live, Week 7 is the midterm transition (site audited, Part II project page with the proposal; the audit workshop),
+  the workflow audit moved to Week 8 (a new workflow repository), milestones D1–D10 became one tag per week (`week-NN`, every week graded), BUILDSPEC milestones became tasks folders, and Reading a Script moved to Week 9. Earlier: Coding 101 was added as Week 2, pushing web coding
+  to Week 3 (where Graphic Design 101 joins it) and context to Week 4. Every proposed milestone D1–D6
   kept its proposed week. The Guest Lectures section was removed Nov 2026 (not confirmed).
 - **Boilerplate re-synced to laar61400 verbatim (Nov 2026)**, incl. its Public Safety block and site footer,
   which this copy had lost. Only the grade-breakdown weights and the two substitutions below differ.
