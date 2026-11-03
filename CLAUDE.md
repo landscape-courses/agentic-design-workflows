@@ -97,6 +97,8 @@ Topic-named, no week prefixes, same as laar61400 and laar64150.
     once a copy has elective-specific edits, either stop re-running it for that slug or re-apply the
     edits after. The script rewrites nav, `<title>`, the title-slide stamp, relative image paths and
     the deck id; it changes no slide content.
+  - **`computational-thinking.html` has diverged:** its last two slides (the 4D framework, and the
+    share session's weekly lens) are Arch 51580 only. Re-running the reuse script drops them; re-apply after.
   - Deck ids are `a51-NN`, not laar61400's `wNN` — deck.js keys the speaker-notes passphrase in
     localStorage (`deck-notes-pass-<id>`) and the Presenter View BroadcastChannel off the id, so a
     shared id would make the two courses' decks talk over each other.
