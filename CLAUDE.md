@@ -38,7 +38,7 @@ Hand-authored static HTML, no build step. Keep it that way.
   `.wf-step-head` to get a done check; a `.wf-step` without one is a session divider.
 - Labels are weeks, one scheme for everything: workshop header chip `WEEK NN`, nav number = week,
   git tag `week-NN`. Dates live only in `index.html`. First spec chip is Length ("One class").
-- `workshops/` pages are the weekly agenda (nav section "Weeks"). Each part of the class gets a
+- `workshops/` pages are the weekly agenda (nav section "Weeks"), one per week. A week not yet written is a stub with an `AGENDA` / "To come" part and a ticket in `tasks/`. Each part of the class gets a
   `.wf-session` divider whose num is its kind — `LECTURE`, `WORKSHOP`, `DISCUSSION` — and whose label is
   its title. A lecture part is a `wf-nocheck` card linking the deck; the deck stays standalone. A Due chip is the one date a page may repeat; omit it until the
   Spring 2027 calendar is set.
@@ -155,7 +155,7 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
     as a reference solution, and has not been run inside Rhino.
 
 ## Nav
-Three sections — Lectures, Workshops, Reference — identical in all pages and inline in each, as
+Three sections — Lectures, Weeks (all 14, one page each), Reference — identical in all pages and inline in each, as
 everywhere on this site. `ARCH_NAV` in `arch51580_reuse_lectures.py` is the copy the script injects;
 after a nav edit, re-run the script for the four copies and sed the two hand-authored pages
 (`index.html`, `workshops/coding-101.html`).
