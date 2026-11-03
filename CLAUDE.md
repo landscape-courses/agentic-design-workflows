@@ -148,23 +148,13 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
   Part II project page from the student's answers. Step 02: fresh-session check, tag `week-07`. Wraps up
   the site so students can keep it on their own; the workflow audit itself is the Week 8 milestone, in its
   own repository.
-- `coding-101.html` (Week 09 chip, "Reading a Script") — Week 9, mid-semester, **six steps
-  in Grasshopper**: an input is a variable → a loop over a List-access input → choose, and the 8.33
-  trap → write the spec → read what came back → check before you bake. Header chip is `WEEK 09`.
-  Carries no dates; the one deliverable is named in the `.wf-outcome` box.
-  - The intro lists the **five moves**; `index.html`'s Week 9 row names them too. Keep both in sync.
-  - **Every code block is copy-paste ready**, because students copy from the page rather than
-    retype. The `<pre>` holds exactly what lands on the clipboard: no line numbers, no decoration.
-    `.ws-copy` buttons are added by an inline script at the end of the page (Clipboard API with an
-    `execCommand` fallback). This is the site's first copy-button; promote it to
-    `workflow-shared.css` if a second page needs one.
-  - All Python shown has been run; the numbers quoted on the page (`8.333333333333332`,
-    `20.833333333333336`, `steep: 2 of 3`) are its real output. Re-run before changing any of them.
-  - The RhinoCommon slope script on lecture slide 15 is **framed as agent output to be read**, not
-    as a reference solution, and has not been run inside Rhino.
+- `build-your-tool.html` (`WEEKS 08–14` chip, "Build Your Own Tool") — all of Part II on one page,
+  one nav entry. Students build their own tool and manage the agents doing the work; class is desk
+  crits; each week one thing, tagged `week-NN` with a self-report message; Week 14 is the final review.
+  The per-week Part II pages (incl. `coding-101.html`, Reading a Script) were deleted Nov 2026.
 
 ## Nav
-Three sections — Lectures, Weeks (all 14, one page each), Reference — identical in all pages and inline in each, as
+Three sections — Lectures, Weeks (01–07 one page each, then one `08–14` entry), Reference — identical in all pages and inline in each, as
 everywhere on this site. `ARCH_NAV` in `arch51580_reuse_lectures.py` is the copy the script injects;
 after a nav edit, re-run the script for the four copies and sed the two hand-authored pages
 (`index.html`, `workshops/coding-101.html`).
