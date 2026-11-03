@@ -111,8 +111,9 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
 `index.html` are copied verbatim from laar61400's logistics grid.
 
 - Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
-- `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, Claude Code once in a
-  terminal (the only terminal use), then Claude desktop's Code tab installs Git and makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
+- `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, Claude desktop's Code tab
+  installs Git and the GitHub CLI, one terminal step (`gh auth login`, the step the agent cannot do, plus
+  a look at Claude Code in the terminal), then Claude makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
   rule: every milestone is a Git tag (`D1`…`D10`) on the student's public repo; the tagged commit
   is the submission. Resubmit = new suffixed tag (`D3-r1`), never a moved tag; push time is the timestamp. Stated once in `index.html` Assignments ("Submission").
 - `folders-and-claude.html` (WS02, "Folders and Claude") — Week 2, adapted from the Agents in
