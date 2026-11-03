@@ -866,3 +866,23 @@
   .wf-doc .wf-step.wf-done:not(.wf-open) .wf-step-head > .wf-step-num { position: static; }
   .wf-doc .wf-aside { margin-left: 0; }
 }
+
+/* ── Warning box: a rule that breaks things if missed ── */
+.wf-warn {
+  border: 2px solid var(--alert);
+  border-radius: 6px;
+  background: var(--alert-bg);
+  padding: 18px 22px;
+  margin: 16px 0;
+}
+.wf-warn > strong {
+  display: block;
+  font-size: 17px;
+  color: var(--alert);
+  margin-bottom: 6px;
+}
+.wf-warn > span {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--gray-900);
+}

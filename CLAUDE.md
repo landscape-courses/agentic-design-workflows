@@ -44,6 +44,8 @@ Hand-authored static HTML, no build step. Keep it that way.
   inside `.wf-tips` is untouched.
 - Last spec chip is a green Outcome chip, `.wf-spec-item.wf-spec-outcome`: the workshop's outcome
   in one short phrase. Colors are `--done*` in `tokens.css`.
+- `.wf-warn` (red box, `<strong>` heading + `<span>` text): a rule that breaks things if missed.
+  Use sparingly.
 - `.wf-ongoing` (optional), directly under the assignment: the semester-long deliverable this feeds.
 - Walkthrough video: a `.wf-step wf-full wf-nocheck` card under its Session label, `▶` as the step
   number, YouTube iframe in `.wf-video` (16:9 default; set `aspect-ratio` inline otherwise).
