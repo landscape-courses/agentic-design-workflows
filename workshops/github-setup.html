@@ -129,14 +129,14 @@
         <span class="wf-step-label">Once, in a Terminal</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">Before the app, see what is underneath it. Open <strong>Terminal</strong> (macOS) or <strong>PowerShell</strong> (Windows), install Claude Code, and start it:</div>
+        <div class="wf-step-desc">Before the app, see what is underneath it. Open <strong>Terminal</strong> (macOS) or <strong>Command Prompt</strong> (Windows; search for <code>cmd</code>), install Claude Code, and start it:</div>
         <div class="ws-code">
           <span class="ws-code__label">macOS</span>
           <pre>curl -fsSL https://claude.ai/install.sh | bash</pre>
         </div>
         <div class="ws-code">
-          <span class="ws-code__label">Windows PowerShell</span>
-          <pre>irm https://claude.ai/install.ps1 | iex</pre>
+          <span class="ws-code__label">Windows Command Prompt</span>
+          <pre>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</pre>
         </div>
         <div class="ws-code">
           <span class="ws-code__label">both systems, then sign in when asked</span>
@@ -150,6 +150,7 @@
         <div class="wf-step-desc">That is the whole agent: text in, commands run, text out. The desktop app is the same agent with a window around it. Type <code>/exit</code> and close the terminal. You will not need it again this semester.</div>
         <ul class="wf-tips">
           <li>If <code>claude</code> is "not found" right after installing, close the terminal and open a new one.</li>
+          <li>On Windows, stay in Command Prompt, not PowerShell. PowerShell can pick up the wrong <code>claude</code> file and ask which app to open it with.</li>
         </ul>
       </div>
     </div>
