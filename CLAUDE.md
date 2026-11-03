@@ -89,16 +89,15 @@ Agents are the subject; the website is the by-product. Part I (Weeks 1–7) teac
 with an agent each week: First Session · Context through Folders · Checking the Agent's Work ·
 Standards the Agent Follows · Managing Agents (the brief: goal, scope, resources, when to ask; lead session reviews, spawned Sonnet agents build; side
 chat sent to main; fork) · Skills · Aligning with Claude. Part II (Weeks 8–13) is light by design:
-desk crits and the student's own development. Each of those weeks the student does one thing and
+a live-log page, desk crits and the student's own development. Each of those weeks the student does one thing and
 has Claude tag it with a message saying what was done; the message is the self-report and the
 week is complete. Week 14 is the graded final. Page filenames kept their old slugs.
 
 ## Lectures (`lectures/`)
 Topic-named, no week prefixes, same as laar61400 and laar64150.
 
-- `coding-101.html` (lecture) was **deleted Nov 2026**; it did not work in the room. Its five moves,
-  error-reading and GH_ScriptInstance points were folded into the workshop of the same name.
-  Coding 101 is now workshop-only.
+- `coding-101.html` (lecture) was **deleted Nov 2026**; it did not work in the room. The workshop of the
+  same name (Reading a Script) was deleted later in Nov 2026; Python now appears as a Week 8 live demo.
 
 - Four decks are **copies of laar61400's**, written by
   `../../../course-prep/scripts/arch51580_reuse_lectures.py`:
@@ -123,8 +122,8 @@ Topic-named, no week prefixes, same as laar61400 and laar64150.
 ## Workshops (`workshops/`)
 `.wf-doc` layout + `wf-progress.js`, same conventions as laar61400's `workflows/` (see its CLAUDE.md,
 "WF page conventions"). Named `workshops/` here because that is what the syllabus calls them.
-Rhino 8 and Grasshopper are course requirements from Week 9; the software cards for them in
-`index.html` are copied verbatim from laar61400's logistics grid.
+Rhino 8 and Grasshopper are needed in Part II only if a student's tool works with them; the
+software cards for them in `index.html` are copied from laar61400's logistics grid.
 
 - Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
 - `github-setup.html` (Week 01 chip, "First Session") — Week 1. GitHub account, Claude desktop's Code tab
@@ -156,8 +155,8 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
 ## Nav
 Three sections — Lectures, Weeks (01–07 one page each, then one `08–14` entry), Reference — identical in all pages and inline in each, as
 everywhere on this site. `ARCH_NAV` in `arch51580_reuse_lectures.py` is the copy the script injects;
-after a nav edit, re-run the script for the four copies and sed the two hand-authored pages
-(`index.html`, `workshops/coding-101.html`).
+after a nav edit, re-run the script for the four copies and sed the hand-authored pages
+(`index.html` and every `workshops/*.html`).
 
 ## Syllabus (`index.html`)
 Same `syllabus-section` / `schedule-table` / `grade-breakdown` classes as laar61400's, so
@@ -168,8 +167,8 @@ needed (it is not wired up for this course yet — `COURSE` in that script is la
   `.syllabus-body` label between them.
 - `_course/proposal.md` in the factory is the **frozen record of what was submitted** (Sep 2026).
   This page is the source of truth for the schedule going forward; the two have diverged on purpose
-  and are not to be hand-synced. The divergence (Nov 2026 rework): Week 2 is Folders and Claude with the site live, Week 7 is the midterm transition (site audited, Part II project page with the proposal; the audit workshop),
-  the workflow audit moved to Week 8 (a new workflow repository), milestones D1–D10 became one tag per week (`week-NN`, every week graded), BUILDSPEC milestones became tasks folders, and Reading a Script moved to Week 9. Earlier: Coding 101 was added as Week 2, pushing web coding
+  and are not to be hand-synced. The divergence (Nov 2026 rework): Week 2 is Folders and Claude (now titled Context through Folders) with the site live, Week 7 is the midterm transition (site audited, Part II project page with the proposal; the audit workshop),
+  the workflow audit moved to Week 8 (a new workflow repository), milestones D1–D10 became one tag per week (`week-NN`, every week graded), BUILDSPEC milestones became tasks folders, and Reading a Script moved to Week 9 (later deleted; Part II is now one page). Earlier: Coding 101 was added as Week 2, pushing web coding
   to Week 3 (where Graphic Design 101 joins it) and context to Week 4. Every proposed milestone D1–D6
   kept its proposed week. The Guest Lectures section was removed Nov 2026 (not confirmed).
 - **Boilerplate re-synced to laar61400 verbatim (Nov 2026)**, incl. its Public Safety block and site footer,
