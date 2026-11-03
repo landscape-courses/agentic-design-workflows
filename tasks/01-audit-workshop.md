@@ -1,4 +1,4 @@
-# Workshop 04: Auditing the Folder
+# Workshop: Auditing the Folder
 
 **Goal.** A workshop page that teaches students to bring their project folder and their
 Claude agent back into line once the folder has grown. Mid-semester, when CLAUDE.md, the
