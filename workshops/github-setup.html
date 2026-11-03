@@ -168,8 +168,9 @@ whatever is missing. Tell me when both are ready.</pre>
           <span class="ws-code__label">both systems</span>
           <pre>gh auth login</pre>
         </div>
-        <div class="wf-step-desc">Choose <strong>GitHub.com</strong>, then <strong>HTTPS</strong>, then <strong>Login with a web browser</strong>. Copy the one-time code, paste it into the page that opens, and approve. Wait for <code>&#10003; Logged in as &hellip;</code>. The sign-in is saved for your whole computer, so Claude can use it from now on.</div>
+        <div class="wf-step-desc">Choose <strong>GitHub.com</strong>, then <strong>HTTPS</strong>. When it asks <strong>Authenticate Git with your GitHub credentials?</strong>, answer <strong>Yes</strong>: that lets every push use this sign-in. Then choose <strong>Login with a web browser</strong>. Copy the one-time code, paste it into the page that opens, and approve. Wait for <code>&#10003; Logged in as &hellip;</code>. The sign-in is saved for your whole computer, so Claude can use it from now on.</div>
         <ul class="wf-tips">
+          <li>On Windows, a GitHub sign-in window may still appear on your first push. That is Git&rsquo;s own sign-in; log in with the same account and it will not ask again.</li>
           <li>If <code>gh</code> is "not found", close the terminal and open a new one. A window that was already open does not see newly installed programs.</li>
         </ul>
       </div>
