@@ -49,7 +49,8 @@ Hand-authored static HTML, no build step. Keep it that way.
 - Example images: collapsible `<details class="wf-examples">` "Hint" card plus click-to-enlarge
   lightbox. PNG for flat UI screenshots; JPG only when it actually wins. ffmpeg only.
 - Pages are HTML only; no markdown sources.
-- Copy: short, imperative, no AI-sounding parallel structures.
+- Copy: short, imperative, no AI-sounding parallel structures. Say what a thing is, not what it
+  is not: no "no X, no Y" lists, no "not A, but B" framing.
 
 ## Origin
 Migrated Nov 2026 from `zihaoooo/zihao-site` `teaching/arch51580/`. The notes below are that
