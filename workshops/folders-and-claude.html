@@ -74,7 +74,7 @@
   <div class="wf-spec">
     <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
     <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; GitHub Pages</span></div>
-    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">A photo and a short bio</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">A short bio, an image</span></div>
     <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Bio page live, tagged <code>D1</code></span></div>
   </div>
 
@@ -105,7 +105,7 @@
   <!-- Intro -->
   <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
     <div class="wf-step-desc">Claude forgets every conversation when the session ends. The folder is what lasts. Today you set up a folder that tells a new session everything it needs: what the project is, where things are, and what to do next.</div>
-    <div class="wf-step-desc">By the end of class your site is live: one page, your name, your photo, your bio. The rest of Part I builds on it.</div>
+    <div class="wf-step-desc">By the end of class your site is live: one page, your name, your bio, and an image if you want one. The rest of Part I builds on it.</div>
   </div>
 
   <!-- Steps -->
@@ -119,7 +119,7 @@
       <div class="wf-step-body">
         <div class="wf-step-desc">Open your <code>username.github.io</code> folder from Workshop 01. Inside it, make a folder called <code>_source</code> and put in what your site will draw on:</div>
         <ul class="wf-tips">
-          <li><strong>A photo of you</strong>, or one image of your work.</li>
+          <li><strong>One image</strong>, optional: a photo of you, or a piece of your work. Your site is public, so pick what you are comfortable putting online.</li>
           <li><strong>A short bio</strong>: a paragraph in a text file. Rough is fine; Claude will ask you about it.</li>
           <li><strong>Your CV</strong>, if you have one handy.</li>
         </ul>
@@ -129,12 +129,12 @@
           <pre>username.github.io/
 ├─ README.md
 └─ _source/
-   ├─ portrait.jpg
+   ├─ studio-model.jpg
    ├─ bio.md
    └─ cv.pdf</pre>
         </div>
         <ul class="wf-tips">
-          <li><code>IMG_4471.jpg</code> and <code>bio final v2 (1).docx</code> make Claude open every file to find out what it is. <code>portrait.jpg</code> and <code>bio.md</code> answer the question before it is asked.</li>
+          <li><code>IMG_4471.jpg</code> and <code>bio final v2 (1).docx</code> make Claude open every file to find out what it is. <code>studio-model.jpg</code> and <code>bio.md</code> answer the question before it is asked.</li>
         </ul>
       </div>
     </div>
@@ -176,8 +176,8 @@ _source out of Git; it holds originals.</pre>
         <div class="ws-code">
           <span class="ws-code__label">prompt to Claude</span>
           <pre>Make a tasks folder. Add a file tasks/01-bio-page.md describing one
-task: a single index.html page with my name, my photo from _source,
-and my bio. Plain HTML and CSS in one file. Then add a line to
+task: a single index.html page with my name, my bio, and the image
+from _source if there is one. Plain HTML and CSS in one file. Then add a line to
 CLAUDE.md saying that open tasks live in tasks/ and finished ones move
 to tasks/done/.</pre>
         </div>
@@ -201,7 +201,7 @@ to tasks/done/.</pre>
           <pre>Read CLAUDE.md and tasks/. Do the first open task, open a preview,
 and move the task to tasks/done/ when I approve it.</pre>
         </div>
-        <div class="wf-step-desc">Look at the preview and correct it in plain words: a bigger name, a quieter color, more space around the photo.</div>
+        <div class="wf-step-desc">Look at the preview and correct it in plain words: a bigger name, a quieter color, more space around the image.</div>
         <div class="ws-predict">
           <strong>Before you approve</strong>
           <span>Did Claude follow CLAUDE.md and the task file, or only what you said in the chat? Look for one detail from the task file in the page.</span>
