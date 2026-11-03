@@ -37,8 +37,10 @@ Hand-authored static HTML, no build step. Keep it that way.
 - Layout: `<div class="wf-wrap wf-doc">` plus `wf-progress.js` after `nav.js`. Every step needs a
   `.wf-step-head` to get a done check; a `.wf-step` without one is a session divider.
 - Labels are weeks, one scheme for everything: workshop header chip `WEEK NN`, nav number = week,
-  git tag `week-NN`. Dates live only in `index.html`. First spec chip is Length ("2 sessions"); parts are
-  labeled Session 1, Session 2. A Due chip is the one date a page may repeat; omit it until the
+  git tag `week-NN`. Dates live only in `index.html`. First spec chip is Length ("One class").
+- `workshops/` pages are the weekly agenda (nav section "Weeks"). Each part of the class gets a
+  `.wf-session` divider whose num is its kind — `LECTURE`, `WORKSHOP`, `DISCUSSION` — and whose label is
+  its title. A lecture part is a `wf-nocheck` card linking the deck; the deck stays standalone. A Due chip is the one date a page may repeat; omit it until the
   Spring 2027 calendar is set.
 - `.wf-objectives`: between spec strip and assignment, one to three short `<li>` phrases, each
   naming the idea that transfers beyond the software.

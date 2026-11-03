@@ -38,7 +38,7 @@
       <a class="panel-link" href="/agentic-design-workflows/lectures/graphic-design-101.html">Graphic Design 101</a>
     </div>
     <div class="panel-section">
-      <span class="panel-section-label">Workshops</span>
+      <span class="panel-section-label">Weeks</span>
       <a class="panel-link" href="/agentic-design-workflows/workshops/github-setup.html"><span class="panel-link-num">01</span>Your First Repository</a>
       <a class="panel-link" href="/agentic-design-workflows/workshops/folders-and-claude.html"><span class="panel-link-num">02</span>Folders and Claude</a>
       <a class="panel-link active" href="/agentic-design-workflows/workshops/folder-audit.html"><span class="panel-link-num">07</span>Aligning with Claude</a>
@@ -62,13 +62,13 @@
     <div class="wf-index">WEEK 07</div>
     <div class="wf-header-text">
       <div class="wf-title">Aligning with Claude</div>
-      <div class="wf-subtitle">One interview, from purpose to structure to design &middot; a project page for Part II</div>
+      <div class="wf-subtitle">Workshop: one interview, from purpose to structure to design &middot; Discussion: Part II ideas</div>
     </div>
   </div>
 
   <!-- Spec strip -->
   <div class="wf-spec">
-    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One class</span></div>
     <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop</span></div>
     <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your site folder, a Part II idea</span></div>
     <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Site aligned, tagged <code>week-07</code></span></div>
@@ -102,6 +102,8 @@
 
   <!-- Steps -->
   <div class="wf-steps">
+
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">Aligning with Claude</span><span class="wf-session-rule"></span></div>
 
     <div class="wf-step wf-full">
       <div class="wf-step-head">
@@ -139,12 +141,7 @@ List each change with its file and why. Apply nothing until I
 approve.
 
 When the rounds are done, sort tasks/: move finished ones to
-tasks/done/ and ask me before deleting any.
-
-Last, add a task and build projects/part-two.html, linked from the
-home page, holding my Part II proposal: the problem, my current
-workflow, the track, and what success looks like. Ask me for each
-part and use my words.</pre>
+tasks/done/ and ask me before deleting any.</pre>
         </div>
         <ul class="wf-tips">
           <li>Answer in your own words, briefly. A short answer you mean beats a long one you do not.</li>
@@ -156,10 +153,54 @@ part and use my words.</pre>
     <div class="wf-step wf-full">
       <div class="wf-step-head">
         <span class="wf-step-num">02</span>
-        <span class="wf-step-label">Check and Hand It In</span>
+        <span class="wf-step-label">Check</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">Close the session, open a new one, and ask what the project is. The answer should match what you said in the interview. Where it does not, fix the file. Then:</div>
+        <div class="wf-step-desc">Close the session, open a new one, and ask what the project is. The answer should match what you said in the interview. Where it does not, fix the file.</div>
+      </div>
+    </div>
+
+    <div class="wf-session"><span class="wf-session-num">DISCUSSION</span><span class="wf-session-label">Part II Ideas</span><span class="wf-session-rule"></span></div>
+
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Part II is a tool for your own design work. Bring one idea from a studio project and talk it through with the room:</div>
+        <ul class="wf-tips">
+          <li>Which step of your workflow do you repeat, dread, or do badly?</li>
+          <li>Which track does it fit?</li>
+          <li>What would the smallest useful version do on one real input?</li>
+          <li>How would you know it worked?</li>
+        </ul>
+        <div class="wf-step-desc">Take notes on what the room asks you. They are the first draft of your proposal.</div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Add the Project Page</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Part I built the site. Part II lives on it. Back in Claude:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Add a task and build projects/part-two.html, linked from the home
+page, holding my Part II proposal: the problem, my current workflow,
+the track, and what success looks like. Ask me for each part and
+use my words.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>Rename <code>part-two.html</code> to your project&rsquo;s name once it has one. Names are context.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">Hand It In</span>
+      </div>
+      <div class="wf-step-body">
         <div class="ws-code">
           <span class="ws-code__label">prompt to Claude</span>
           <pre>Commit everything, push, then tag the latest commit week-07 and
