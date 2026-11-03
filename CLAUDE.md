@@ -4,8 +4,8 @@ Repo in the `landscape-courses` org. Served by GitHub Pages at
 `https://landscape-courses.github.io/agentic-design-workflows/` from `main` / root (`.nojekyll`).
 Hand-authored static HTML, no build step. Keep it that way.
 
-## Working rules (all instructors, all Claude sessions)
-- **Never push to `main`.** Work on a branch, open a PR, the other instructor reviews.
+## Working rules (all Claude sessions)
+- **Push straight to `main`.** No PR or review step needed; the repo has a sole owner.
 - **Every internal path starts with `/agentic-design-workflows/`** (the Pages subpath). A bare `/assets/...`
   breaks on Pages. If a custom domain is added later, sed the prefix away in one pass.
 - **Self-contained.** CSS, JS, deck system and images all live in this repo. Do not link assets
