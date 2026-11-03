@@ -17,6 +17,8 @@ Hand-authored static HTML, no build step. Keep it that way.
 - Nothing private here: the repo is public. Grades, rubrics with student names, student work stay out.
 
 ## Layout
+- `tasks/` — work queued for a later session, one Markdown file per task, numbered. Finished
+  tasks move to `tasks/done/`. A session asked to "do the next task" starts here.
 - `index.html` — syllabus. `lectures/` — deck pages. `workshops/` — step-by-step lab pages.
 - `assets/deck/` — slide-deck system; `deck-spec.md` is its spec. Read it before touching a deck.
 - `assets/css/` — `tokens.css` (every font and color as a variable; write `var(--…)`, never a hex),
