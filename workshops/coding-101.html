@@ -54,7 +54,6 @@
     <div class="panel-section">
       <span class="panel-section-label">Lectures</span>
       <a class="panel-link" href="/agentic-design-workflows/lectures/computational-thinking.html">A History of Computational Thinking</a>
-      <a class="panel-link" href="/agentic-design-workflows/lectures/coding-101.html">Coding 101</a>
       <a class="panel-link" href="/agentic-design-workflows/lectures/web-coding-literacy.html">Web Coding Literacy</a>
       <a class="panel-link" href="/agentic-design-workflows/lectures/cybernetics-and-design.html">Cybernetics and Design</a>
       <a class="panel-link" href="/agentic-design-workflows/lectures/graphic-design-101.html">Graphic Design 101</a>
@@ -121,6 +120,14 @@
   <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
     <div class="wf-step-desc">You already read Grasshopper definitions. A Python component is one more component &mdash; inputs on the left, outputs on the right &mdash; except that what happens in the middle is written down where you can read it. That turns out to be the whole lesson: <strong>the things you wire into the left side are the variables the code uses</strong>, and nothing else about a script is mysterious once that lands.</div>
     <div class="wf-step-desc">Every code block below has a <strong>Copy</strong> button. Paste rather than retype &mdash; the point today is reading, not typing. The order matters: <strong>predict before you run</strong>. A prediction you got wrong shows you where your model of the machine is off, and running it first robs you of that.</div>
+    <div class="wf-step-desc">Every script is built from five moves. Languages differ in spelling, not in moves:</div>
+    <ul class="wf-tips">
+      <li><strong>Name</strong> &mdash; put a value in a labeled box. <code>slope = rise / run * 100</code></li>
+      <li><strong>Repeat</strong> &mdash; do the same thing to every item. <code>for r in rise:</code></li>
+      <li><strong>Choose</strong> &mdash; take a branch by a test someone wrote. <code>if s &gt; limit:</code></li>
+      <li><strong>Bundle</strong> &mdash; name a group of steps with slots for what varies. <code>def RunScript(self, rise, run, limit):</code></li>
+      <li><strong>Read and write</strong> &mdash; touch the world outside the script. Baking into the Rhino document.</li>
+    </ul>
   </div>
 
   <!-- Steps -->
@@ -198,6 +205,7 @@ a = slopes</pre>
         <ul class="wf-tips">
           <li><code>slopes = []</code> makes an empty list; <code>.append()</code> puts one value on the end of it. The loop runs once per item in <code>rise</code>, and <code>r</code> is whichever item it is holding at that moment.</li>
           <li>Set the access back to <strong>Item</strong> and the script breaks &mdash; you cannot loop over a single number. Try it, read the error, set it back.</li>
+          <li>Read an error for <strong>what</strong> (first line) and <strong>where</strong> (the line it quotes). <code>unsupported operand type(s) for /: 'str' and 'float'</code> means a panel fed text into an input with no Type Hint; right-click the input and set it to <code>float</code>. An error is cheap because it stops. The expensive failure runs all the way through and hands you a wrong drawing.</li>
         </ul>
       </div>
     </div>
@@ -233,6 +241,7 @@ a = slopes</pre>
         <ul class="wf-tips">
           <li>Fix it by comparing ratios rather than rounded percentages: <code>if r / run &gt; 1 / 12:</code> &mdash; now a 1:12 ramp passes.</li>
           <li>This is the shape of most wrong answers you will get from an agent. Not a crash. A number that is slightly not the one you meant.</li>
+          <li>In the editor, click <strong>Convert To GH_ScriptInstance</strong>. The same code now sits inside <code>def RunScript(self, rise, run, limit)</code>. The inputs you wired were a function signature all along.</li>
         </ul>
       </div>
     </div>
