@@ -25,6 +25,11 @@
       background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
     .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
     .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
+    /* the big red box: a rule that breaks things if missed */
+    .ws-warn{border:2px solid var(--alert);border-radius:6px;background:var(--alert-bg);
+      padding:18px 22px;margin:16px 0;}
+    .ws-warn strong{display:block;font-size:17px;color:var(--alert);margin-bottom:6px;}
+    .ws-warn span{font-size:15px;line-height:1.65;color:var(--gray-900);}
   </style>
 </head>
 <body>
@@ -192,14 +197,12 @@ whatever is missing. Tell me when both are ready.</pre>
 Commit it with the message "Start". Then create a public repository
 on my GitHub account called [username].github.io and push to it.</pre>
         </div>
-        <div class="ws-predict">
-          <strong>Before you approve</strong>
-          <span>Which of Claude's commands change something outside this folder? Find it before you approve it.</span>
+        <div class="ws-warn">
+          <strong>The name matters</strong>
+          <span>A repository named exactly <code>username.github.io</code> becomes your site at <code>https://username.github.io</code>, with nothing after the slash. Already have one? Name this one <code>website</code>; the site then lives at <code>username.github.io/website</code>.</span>
         </div>
-        <div class="wf-step-desc">The push. It changes GitHub, in public. Everything else stays in the folder.</div>
         <ul class="wf-tips">
           <li>Open <code>github.com/username/username.github.io</code>. Your README is there. That page is now public.</li>
-          <li>The name matters. A repository named exactly <code>username.github.io</code> becomes your site at <code>https://username.github.io</code>, with nothing after the slash. Already have one? Name this one <code>website</code>; the site then lives at <code>username.github.io/website</code>.</li>
         </ul>
       </div>
     </div>
