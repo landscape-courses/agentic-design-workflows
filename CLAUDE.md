@@ -150,7 +150,7 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
   own repository.
 - `build-your-tool.html` (`WEEKS 08–14` chip, "Build Your Own Tool") — all of Part II on one page,
   one nav entry. Students build their own tool and manage the agents doing the work; class is desk
-  crits; Week 8 opens with two live demos (an agent-written Grasshopper Python plugin, and MCP); each week one thing, tagged `week-NN` with a self-report message; Week 14 is the final review.
+  crits; Week 8 opens with two live demos (an agent-written Grasshopper Python plugin, and MCP); Weeks 8–12 are edited on the fly: the "In Class, Week by Week" card holds a live log (newest first, one `<li>` per entry, marked by a `LIVE LOG` comment); a request like "add X to this week" means add an entry there and push; each week one thing, tagged `week-NN` with a self-report message; Week 14 is the final review.
   The per-week Part II pages (incl. `coding-101.html`, Reading a Script) were deleted Nov 2026.
 
 ## Nav
