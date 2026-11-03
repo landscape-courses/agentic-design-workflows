@@ -23,6 +23,34 @@ Hand-authored static HTML, no build step. Keep it that way.
   `main.css`, `workflow-shared.css`, `footer.css`. `assets/js/` — `nav.js`, `wf-progress.js`.
 - `assets/img/<lecture-slug>/` — lecture images.
 
+## Deck rules (from zihao-site)
+- Read `assets/deck/deck-spec.md` before touching a deck; it defines the layouts (`single`, `auto`,
+  `hero-l/r`, `sq`, `points-l/r`, `toc`, `txt-card`/`stmt`/`cmp`) and the phone scroll view.
+- Lectures are standalone: no week numbers in nav, `<title>`, header chip (`LECTURE`), deck title,
+  title-slide stamp, slide text or notes. Refer to another lecture by its title.
+- URL is `lectures/<slug>.html`, images in `assets/img/<slug>/`.
+- Never put `*/` inside a CSS comment: it closes the comment and silently drops every rule after it.
+
+## Workshop page rules (from zihao-site WF conventions)
+- Layout: `<div class="wf-wrap wf-doc">` plus `wf-progress.js` after `nav.js`. Every step needs a
+  `.wf-step-head` to get a done check; a `.wf-step` without one is a session divider.
+- Weeks and dates live only in `index.html`. First spec chip is Length ("2 sessions"); parts are
+  labeled Session 1, Session 2. A Due chip is the one date a page may repeat; omit it until the
+  Spring 2027 calendar is set.
+- `.wf-objectives`: between spec strip and assignment, one to three short `<li>` phrases, each
+  naming the idea that transfers beyond the software.
+- `.wf-outcome`: one `<strong>Assignment</strong>` label, one sentence, product-framed, format
+  folded in. No separate Deliverable section. Scope CSS as `.wf-outcome > strong`, so `<strong>`
+  inside `.wf-tips` is untouched.
+- `.wf-ongoing` (optional), directly under the assignment: the semester-long deliverable this feeds.
+- Walkthrough video: a `.wf-step wf-full wf-nocheck` card under its Session label, `▶` as the step
+  number, YouTube iframe in `.wf-video` (16:9 default; set `aspect-ratio` inline otherwise).
+  `wf-nocheck` keeps saved checks in position.
+- Example images: collapsible `<details class="wf-examples">` "Hint" card plus click-to-enlarge
+  lightbox. PNG for flat UI screenshots; JPG only when it actually wins. ffmpeg only.
+- Pages are HTML only; no markdown sources.
+- Copy: short, imperative, no AI-sounding parallel structures.
+
 ## Origin
 Migrated Nov 2026 from `zihaoooo/zihao-site` `teaching/arch51580/`. The notes below are that
 folder's teaching context, kept as written. Where they mention `../laar61400/`, the factory
