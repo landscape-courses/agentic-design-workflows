@@ -156,6 +156,10 @@ under 40 lines and show it to me before you build anything. Keep
 _source out of Git; it holds originals.</pre>
         </div>
         <div class="wf-step-desc">Read what it wrote and correct it in words. The file is yours; Claude is the one typing.</div>
+        <div class="ws-predict">
+          <strong>Check</strong>
+          <span>Close the session and open a new one in the same folder. Ask: <em>&ldquo;What is this project, and how is it organized?&rdquo;</em> If the answer is wrong, fix the file, then ask again.</span>
+        </div>
         <ul class="wf-tips">
           <li>CLAUDE.md holds what Claude cannot work out by reading the files: what the site is for, the folder map, rules you have decided.</li>
         </ul>
@@ -219,10 +223,6 @@ tasks/done/ when I approve it.</pre>
         <div class="ws-code">
           <span class="ws-code__label">prompt to Claude</span>
           <pre>Commit everything except _source and push it.</pre>
-        </div>
-        <div class="ws-predict">
-          <strong>Check</strong>
-          <span>Close the session and open a new one in the same folder. Ask: <em>&ldquo;What is this project, and how is it organized?&rdquo;</em> If the answer is wrong, fix the file, then ask again.</span>
         </div>
         <div class="wf-step-desc">Open <code>github.com/username/username.github.io</code> and check that <code>index.html</code> and <code>CLAUDE.md</code> are there, and <code>_source</code> is not.</div>
         <ul class="wf-tips">
