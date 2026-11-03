@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your First Repository — Arch 51580</title>
+  <link rel="stylesheet" href="/agentic-design-workflows/assets/css/main.css">
+  <link rel="stylesheet" href="/agentic-design-workflows/assets/css/workflow-shared.css">
+  <style>
+    /* copy-paste code block. No line numbers and no decoration inside <pre>:
+       whatever is in there is exactly what lands on the student's clipboard. */
+    .ws-code{position:relative;border:1px solid var(--line);border-radius:6px;background:var(--gray-100);
+      padding:14px 16px;margin:12px 0 4px;overflow-x:auto;}
+    .ws-code pre{margin:0;font:400 13.5px/1.75 var(--font-mono);color:var(--gray-900);white-space:pre;}
+    .ws-code__label{display:block;font:700 10px/1 var(--font-mono);letter-spacing:.12em;
+      text-transform:uppercase;color:var(--gray-500);margin-bottom:9px;padding-right:70px;}
+    .ws-copy{position:absolute;top:9px;right:9px;appearance:none;cursor:pointer;
+      border:1px solid var(--line);background:#fff;color:var(--gray-700);border-radius:999px;
+      font:600 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;
+      padding:7px 11px;transition:.15s;}
+    .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
+    .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
+  </style>
+</head>
+<body>
+
+  <!-- Side panel -->
+  <nav id="sidepanel">
+    <a class="panel-brand" href="/agentic-design-workflows/index.html">
+      <span class="panel-brand-title">Arch 51580</span>
+      <span class="panel-brand-sub">Agentic Design Workflows</span>
+    </a>
+    <div class="panel-section">
+      <span class="panel-section-label">Lectures</span>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/computational-thinking.html">A History of Computational Thinking</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/web-coding-literacy.html">Web Coding Literacy</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/cybernetics-and-design.html">Cybernetics and Design</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/graphic-design-101.html">Graphic Design 101</a>
+    </div>
+    <div class="panel-section">
+      <span class="panel-section-label">Workshops</span>
+      <a class="panel-link active" href="/agentic-design-workflows/workshops/github-setup.html"><span class="panel-link-num">01</span>Your First Repository</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/coding-101.html"><span class="panel-link-num">02</span>Reading a Script</a>
+    </div>
+    <div class="panel-section">
+      <span class="panel-section-label">Reference</span>
+      <a class="panel-link" href="https://zihaozhang.cc/talks/agents-in-practice/" target="_blank" rel="noopener">Agents in Practice &#8599;</a>
+      <a class="panel-link" href="https://www.anthropic.com/learn" target="_blank" rel="noopener">Anthropic Academy &#8599;</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <div class="page-inner">
+<div class="wf-wrap wf-doc">
+
+  <!-- Header -->
+  <div class="wf-header">
+    <div class="wf-index">WS01</div>
+    <div class="wf-header-text">
+      <div class="wf-title">Your First Repository</div>
+      <div class="wf-subtitle">GitHub account &middot; Git and Claude Code &middot; a repository Claude makes &middot; a tag that hands it in</div>
+    </div>
+  </div>
+
+  <!-- Spec strip -->
+  <div class="wf-spec">
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude Code &middot; Git &middot; GitHub</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your laptop and a paid Claude plan</span></div>
+  </div>
+
+  <!-- Learning objectives -->
+  <div class="wf-objectives">
+    <strong>Learning Objectives</strong>
+    <ul>
+      <li>Reading a command before letting it run</li>
+      <li>Telling a local change from a published one</li>
+      <li>Marking exactly which version you handed in</li>
+    </ul>
+  </div>
+
+  <!-- Assignment -->
+  <div class="wf-outcome">
+    <strong>Assignment</strong><span>A public GitHub repository, made and pushed by Claude, with a README and a <code>ws01</code> tag the instructor opens before class ends.</span>
+  </div>
+
+  <!-- Pipeline strip -->
+  <div class="wf-pipeline">
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Account</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Install</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Folder</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Agent</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Tag</div></div>
+  </div>
+
+  <!-- Intro -->
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">Everything you make in this course lives in one Git repository on GitHub: your site, your specs, your Part II project. Git keeps every saved version. GitHub holds a copy online, publishes the site, and is where your work is handed in.</div>
+    <div class="wf-step-desc">You type four commands yourself today, to install things. After that, Claude runs Git for you. Your job is to read what it is about to do and say yes or no.</div>
+  </div>
+
+  <!-- Steps -->
+  <div class="wf-steps">
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">01</span>
+        <span class="wf-step-label">Make a GitHub Account</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Sign up at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>. Use a personal email, not your CCNY one: this account outlives the course, and so does your site.</div>
+        <div class="wf-step-desc">Pick your username with care. It becomes your public address: <code>username.github.io</code>.</div>
+        <ul class="wf-tips">
+          <li>Short, lowercase, close to your real name. <code>jsmith-design</code> works; <code>xX_studio_2027_Xx</code> follows you around.</li>
+          <li>Turn on two-factor authentication when GitHub asks. An agent will be pushing to this account.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">02</span>
+        <span class="wf-step-label">Install Git and Claude Code</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Open a terminal: <strong>Terminal</strong> on macOS, <strong>PowerShell</strong> on Windows. Install Git first.</div>
+        <div class="ws-code">
+          <span class="ws-code__label">macOS: installs Git with Apple's command line tools</span>
+          <pre>xcode-select --install</pre>
+        </div>
+        <div class="wf-step-desc">On Windows, install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> with the default options, then close and reopen PowerShell. Next, Claude Code:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">macOS</span>
+          <pre>curl -fsSL https://claude.ai/install.sh | bash</pre>
+        </div>
+        <div class="ws-code">
+          <span class="ws-code__label">Windows PowerShell</span>
+          <pre>irm https://claude.ai/install.ps1 | iex</pre>
+        </div>
+        <div class="wf-step-desc">Check both. Each should print a version number, not an error.</div>
+        <div class="ws-code">
+          <span class="ws-code__label">both systems</span>
+          <pre>git --version
+claude --version</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>If a command is "not found" right after installing, close the terminal and open a new one. It reads the list of installed programs only when it starts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Open Claude in a Project Folder</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Make one folder for this course and start Claude inside it. Claude works on the folder it was started in, and nothing outside it.</div>
+        <div class="ws-code">
+          <span class="ws-code__label">both systems</span>
+          <pre>mkdir arch51580-site
+cd arch51580-site
+claude</pre>
+        </div>
+        <div class="wf-step-desc">The first time, Claude asks you to sign in. Use the account with your paid plan.</div>
+        <ul class="wf-tips">
+          <li>Where the folder lives matters less than knowing where it is. Your home folder is fine. Not inside Dropbox, iCloud or OneDrive: sync tools and Git fight over the same files.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">Ask Claude to Make the Repository</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">From here on you talk and Claude runs the commands. Paste this, with your own name:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Make this folder a Git repository. Write a README.md with my name,
+[Your Name], and one sentence on what I hope to build this semester.
+Commit it with the message "Start". Then install the GitHub CLI if it
+is missing, create a public repository on my GitHub account called
+arch51580-site, and push to it.</pre>
+        </div>
+        <div class="wf-step-desc">Claude asks before it runs each command. <strong>Read each one before you say yes.</strong> You do not need to know every flag; you need to know which ones only look at things and which ones change them.</div>
+        <div class="ws-predict">
+          <strong>Before you approve</strong>
+          <span>Which of Claude's commands change something outside this folder? There is exactly one kind. Find it before you approve it.</span>
+        </div>
+        <div class="wf-step-desc">It is the push. Everything else stays on your laptop until then.</div>
+        <ul class="wf-tips">
+          <li>GitHub sign-in opens a browser, which Claude cannot click through for you. When it asks, type <code>! gh auth login</code> in Claude: the <code>!</code> runs the command yourself, in the same window.</li>
+          <li>Open <code>github.com/username/arch51580-site</code>. Your README is there. That page is now public.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">05</span>
+        <span class="wf-step-label">Tag It and Hand It In</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">A commit is a saved snapshot. A <strong>tag</strong> is a name pinned to one snapshot, and it is how every assignment in this course is handed in. Whatever the tag points at is what you submitted, with a timestamp nobody can argue with.</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Tag the latest commit ws01 and push the tag.</pre>
+        </div>
+        <div class="wf-step-desc">Check it on GitHub: on your repository page, open the branch menu and switch to the <strong>Tags</strong> tab. <code>ws01</code> should be there.</div>
+        <div class="wf-step-desc">Give your repository URL to the instructor. It will be opened in class, before you leave.</div>
+        <ul class="wf-tips">
+          <li>Every milestone works the same way: <code>D1</code>, <code>D2</code> and so on, pushed by the due date. Work you push after the tag is not part of the submission.</li>
+          <li>Changed something after tagging? Ask Claude to move the tag to the new commit and push it again. The tag's date changes too.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ongoing -->
+  <div class="wf-ongoing">
+    <strong>Feeds forward</strong><span>This repository becomes your personal site in Weeks 3&ndash;7. Every milestone is a tag on it, and the instructor reads it between sessions.</span>
+  </div>
+
+</div>
+    </div>
+  </main>
+
+  <script src="/agentic-design-workflows/assets/js/nav.js"></script>
+  <script src="/agentic-design-workflows/assets/js/wf-progress.js"></script>
+  <script>
+  /* Copy buttons on every code block. The <pre> holds exactly what students
+     should get — no line numbers, no decoration — so copy its text verbatim. */
+  (function () {
+    document.querySelectorAll('.ws-code').forEach(function (box) {
+      var pre = box.querySelector('pre');
+      if (!pre) return;
+      var btn = document.createElement('button');
+      btn.className = 'ws-copy';
+      btn.type = 'button';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function () {
+        var text = pre.innerText;
+        var done = function () {
+          btn.textContent = 'Copied';
+          btn.classList.add('is-done');
+          setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('is-done'); }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else { fallback(); }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.cssText = 'position:fixed;top:-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Select it'; }
+          document.body.removeChild(ta);
+        }
+      });
+      box.appendChild(btn);
+    });
+  })();
+  </script>
+</body>
+</html>

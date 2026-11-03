@@ -107,9 +107,13 @@ Topic-named, no week prefixes, same as laar61400 and laar64150.
 Rhino 8 and Grasshopper are course requirements from Week 2; the software cards for them in
 `index.html` are copied verbatim from laar61400's logistics grid.
 
-- `coding-101.html` (WS01, "Reading a Script") — the lab half of the Coding 101 session, **six steps
+- `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, install Git and
+  Claude Code, Claude makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
+  rule: every milestone is a Git tag (`D1`…`D10`) on the student's public repo; the tagged commit
+  is the submission. Stated once in `index.html` Assignments ("Submission").
+- `coding-101.html` (WS02, "Reading a Script") — the lab half of the Coding 101 session, **six steps
   in Grasshopper**: an input is a variable → a loop over a List-access input → choose, and the 8.33
-  trap → write the spec → read what came back → check before you bake. Header chip is `WS01`.
+  trap → write the spec → read what came back → check before you bake. Header chip is `WS02`.
   Carries no dates; the one deliverable is named in the `.wf-outcome` box.
   - The intro lists the **five moves**; `index.html`'s Week 2 row names them too. Keep both in sync.
   - **Every code block is copy-paste ready**, because students copy from the page rather than
