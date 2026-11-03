@@ -87,7 +87,7 @@ once it is, in `index.html` only.
 ## Course frame (Nov 2026)
 Agents are the subject; the website is the by-product. Part I (Weeks 1–7) teaches one way of working
 with an agent each week: First Session · Context through Folders · Checking the Agent's Work ·
-Standards the Agent Follows · Many Agents (lead session reviews, spawned Sonnet agents build; side
+Standards the Agent Follows · Managing Agents (the brief: goal, scope, resources, when to ask; lead session reviews, spawned Sonnet agents build; side
 chat sent to main; fork) · Skills · Aligning with Claude. Part II (Weeks 8–13) is light by design:
 desk crits and the student's own development. Each of those weeks the student does one thing and
 has Claude tag it with a message saying what was done; the message is the self-report and the

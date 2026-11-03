@@ -1,4 +1,4 @@
-# Week 05 agenda: Many Agents
+# Week 05 agenda: Managing Agents
 
 **Goal.** Fill out `workshops/design-and-build.html`, now a stub, as the Week 05 agenda: each part of the class
 under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
@@ -8,7 +8,18 @@ under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Wo
 - Due: two project pages, tagged `week-05`.
 - No lecture this week.
 
-## Ways of working with agents (the core of the week)
+## Management skill (first part of the class)
+A good project manager is good with agents. Before handing work to any agent, write the brief:
+- **Goal.** What done looks like, concretely enough to check.
+- **Scope.** What is in, what is out, which files it may touch.
+- **Resources.** What you give it to get there: the folder and CLAUDE.md, reference files, tools and
+  MCP connectors, the harness it runs in. This is context management from Week 04, aimed at one job.
+- **Decision rights.** When to stop and ask you; what it may decide alone.
+Students write one brief per project page; the main session hands each to a Sonnet agent. Review
+afterwards asks two questions: did the agent miss, or did the brief?
+Learning objective that transfers: the quality of delegated work is set by the brief.
+
+## Ways of working with agents (second part)
 Students meet multiple agents here, in the first half, on pages they already know. The week teaches
 the ways to work with agents, each named for when to reach for it.
 
