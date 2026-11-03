@@ -42,8 +42,8 @@ Hand-authored static HTML, no build step. Keep it that way.
 - `.wf-outcome`: one `<strong>Assignment</strong>` label, one sentence, product-framed, format
   folded in. No separate Deliverable section. Scope CSS as `.wf-outcome > strong`, so `<strong>`
   inside `.wf-tips` is untouched.
-- `.wf-goal` (green pill, first thing inside `.wf-wrap`): the workshop's outcome in one short
-  phrase, `<b>Outcome</b><span>…</span>`. Colors are `--done*` in `tokens.css`.
+- Last spec chip is a green Outcome chip, `.wf-spec-item.wf-spec-outcome`: the workshop's outcome
+  in one short phrase. Colors are `--done*` in `tokens.css`.
 - `.wf-ongoing` (optional), directly under the assignment: the semester-long deliverable this feeds.
 - Walkthrough video: a `.wf-step wf-full wf-nocheck` card under its Session label, `▶` as the step
   number, YouTube iframe in `.wf-video` (16:9 default; set `aspect-ratio` inline otherwise).

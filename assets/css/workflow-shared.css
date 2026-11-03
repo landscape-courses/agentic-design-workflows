@@ -17,28 +17,6 @@
   margin: 0 auto;
 }
 
-/* ── Goal pill: what the workshop produces, above the header ── */
-.wf-goal {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 14px;
-  padding: 6px 14px;
-  border: 1px solid var(--done-line);
-  border-radius: 999px;
-  background: var(--done-bg);
-  color: var(--done);
-  font-size: 13px;
-  line-height: 1.4;
-}
-.wf-goal > b {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
 /* ── Header ── */
 .wf-header {
   display: flex;
@@ -686,6 +664,12 @@
 }
 .wf-spec-due .wf-spec-label { color: var(--alert); }
 .wf-spec-due .wf-spec-value { color: var(--alert); font-weight: 700; }
+.wf-spec-outcome {
+  background: var(--done-bg);
+  box-shadow: inset 0 0 0 1px var(--done-line);
+}
+.wf-spec-outcome .wf-spec-label,
+.wf-spec-outcome .wf-spec-value { color: var(--done); }
 
 /* List */
 .wf-ref-list { display: flex; flex-direction: column; }
