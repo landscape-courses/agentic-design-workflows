@@ -64,14 +64,14 @@
     <div class="wf-index">WS01</div>
     <div class="wf-header-text">
       <div class="wf-title">Your First Repository</div>
-      <div class="wf-subtitle">GitHub account &middot; Git and Claude Code &middot; a repository Claude makes &middot; a tag that hands it in</div>
+      <div class="wf-subtitle">GitHub account &middot; Claude desktop &middot; a repository Claude makes &middot; a tag that hands it in</div>
     </div>
   </div>
 
   <!-- Spec strip -->
   <div class="wf-spec">
     <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
-    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude Code &middot; Git &middot; GitHub</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; GitHub</span></div>
     <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your laptop and a paid Claude plan</span></div>
   </div>
 
@@ -93,8 +93,8 @@
   <!-- Pipeline strip -->
   <div class="wf-pipeline">
     <div class="wf-pipe-step"><div class="wf-pipe-node">Account</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node">Install</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node">Folder</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Terminal, once</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Desktop</div><div class="wf-pipe-arrow">&rarr;</div></div>
     <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Agent</div><div class="wf-pipe-arrow">&rarr;</div></div>
     <div class="wf-pipe-step"><div class="wf-pipe-node">Tag</div></div>
   </div>
@@ -102,7 +102,7 @@
   <!-- Intro -->
   <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
     <div class="wf-step-desc">Everything you make in this course lives in one Git repository on GitHub: your site, your specs, your Part II project. Git keeps every saved version. GitHub holds a copy online, publishes the site, and is where your work is handed in.</div>
-    <div class="wf-step-desc">You type four commands yourself today, to install things. After that, Claude runs Git for you. Your job is to read what it is about to do and say yes or no.</div>
+    <div class="wf-step-desc">You will see the terminal once, so you know what the app is doing underneath. After that you work in the Claude desktop app, and Claude runs Git for you. Your job is to read what it is about to do and say yes or no.</div>
   </div>
 
   <!-- Steps -->
@@ -126,15 +126,10 @@
     <div class="wf-step wf-full">
       <div class="wf-step-head">
         <span class="wf-step-num">02</span>
-        <span class="wf-step-label">Install Git and Claude Code</span>
+        <span class="wf-step-label">Once, in a Terminal</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">Open a terminal: <strong>Terminal</strong> on macOS, <strong>PowerShell</strong> on Windows. Install Git first.</div>
-        <div class="ws-code">
-          <span class="ws-code__label">macOS: installs Git with Apple's command line tools</span>
-          <pre>xcode-select --install</pre>
-        </div>
-        <div class="wf-step-desc">On Windows, install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> with the default options, then close and reopen PowerShell. Next, Claude Code:</div>
+        <div class="wf-step-desc">Before the app, see what is underneath it. Open <strong>Terminal</strong> (macOS) or <strong>PowerShell</strong> (Windows), install Claude Code, and start it:</div>
         <div class="ws-code">
           <span class="ws-code__label">macOS</span>
           <pre>curl -fsSL https://claude.ai/install.sh | bash</pre>
@@ -143,14 +138,18 @@
           <span class="ws-code__label">Windows PowerShell</span>
           <pre>irm https://claude.ai/install.ps1 | iex</pre>
         </div>
-        <div class="wf-step-desc">Check both. Each should print a version number, not an error.</div>
         <div class="ws-code">
-          <span class="ws-code__label">both systems</span>
-          <pre>git --version
-claude --version</pre>
+          <span class="ws-code__label">both systems, then sign in when asked</span>
+          <pre>claude</pre>
         </div>
+        <div class="wf-step-desc">Ask it one thing:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>What folder are you in, and what is in it?</pre>
+        </div>
+        <div class="wf-step-desc">That is the whole agent: text in, commands run, text out. The desktop app is the same agent with a window around it. Type <code>/exit</code> and close the terminal. You will not need it again this semester.</div>
         <ul class="wf-tips">
-          <li>If a command is "not found" right after installing, close the terminal and open a new one. It reads the list of installed programs only when it starts.</li>
+          <li>If <code>claude</code> is "not found" right after installing, close the terminal and open a new one.</li>
         </ul>
       </div>
     </div>
@@ -158,19 +157,13 @@ claude --version</pre>
     <div class="wf-step wf-full">
       <div class="wf-step-head">
         <span class="wf-step-num">03</span>
-        <span class="wf-step-label">Open Claude in a Project Folder</span>
+        <span class="wf-step-label">Open a Folder in Claude Desktop</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">Make one folder for this course and start Claude inside it. Claude works on the folder it was started in, and nothing outside it.</div>
-        <div class="ws-code">
-          <span class="ws-code__label">both systems</span>
-          <pre>mkdir arch51580-site
-cd arch51580-site
-claude</pre>
-        </div>
-        <div class="wf-step-desc">The first time, Claude asks you to sign in. Use the account with your paid plan.</div>
+        <div class="wf-step-desc">Install the <a href="https://claude.ai/download" target="_blank" rel="noopener">Claude desktop app</a> and sign in with the account that has your paid plan.</div>
+        <div class="wf-step-desc">In Finder or File Explorer, make a folder called <code>arch51580-site</code>. In the app, switch to the <strong>Code</strong> tab and choose that folder. Claude works on the folder you chose, and nothing outside it.</div>
         <ul class="wf-tips">
-          <li>Where the folder lives matters less than knowing where it is. Your home folder is fine. Not inside Dropbox, iCloud or OneDrive: sync tools and Git fight over the same files.</li>
+          <li>Not inside Dropbox, iCloud or OneDrive: sync tools and Git fight over the same files. Your home folder or Documents is fine.</li>
         </ul>
       </div>
     </div>
@@ -181,23 +174,25 @@ claude</pre>
         <span class="wf-step-label">Ask Claude to Make the Repository</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">From here on you talk and Claude runs the commands. Paste this, with your own name:</div>
+        <div class="wf-step-desc">From here on you talk and Claude runs the commands, Git included. Paste this, with your own name:</div>
         <div class="ws-code">
           <span class="ws-code__label">prompt to Claude</span>
-          <pre>Make this folder a Git repository. Write a README.md with my name,
-[Your Name], and one sentence on what I hope to build this semester.
-Commit it with the message "Start". Then install the GitHub CLI if it
-is missing, create a public repository on my GitHub account called
+          <pre>Check whether Git and the GitHub CLI are installed, and install
+whatever is missing. Then make this folder a Git repository. Write a
+README.md with my name, [Your Name], and one sentence on what I hope
+to build this semester. Commit it with the message "Start". Sign me in
+to GitHub, create a public repository on my account called
 arch51580-site, and push to it.</pre>
         </div>
-        <div class="wf-step-desc">Claude asks before it runs each command. <strong>Read each one before you say yes.</strong> You do not need to know every flag; you need to know which ones only look at things and which ones change them.</div>
+        <div class="wf-step-desc">Claude asks before it runs each command. <strong>Read each one before you approve it.</strong> You do not need to know every flag; you need to know which ones only look at things and which ones change them.</div>
         <div class="ws-predict">
           <strong>Before you approve</strong>
-          <span>Which of Claude's commands change something outside this folder? There is exactly one kind. Find it before you approve it.</span>
+          <span>Which of Claude's commands change something outside this folder? Find them before you approve them.</span>
         </div>
-        <div class="wf-step-desc">It is the push. Everything else stays on your laptop until then.</div>
+        <div class="wf-step-desc">The installs change your laptop. The push changes GitHub, in public. Everything else stays in the folder.</div>
         <ul class="wf-tips">
-          <li>GitHub sign-in opens a browser, which Claude cannot click through for you. When it asks, type <code>! gh auth login</code> in Claude: the <code>!</code> runs the command yourself, in the same window.</li>
+          <li>Installing may pop up a system window (Apple's developer tools on macOS, an installer on Windows). Click through it, then tell Claude it is done.</li>
+          <li>GitHub sign-in happens in your browser. Claude shows a one-time code; paste it into the page that opens.</li>
           <li>Open <code>github.com/username/arch51580-site</code>. Your README is there. That page is now public.</li>
         </ul>
       </div>

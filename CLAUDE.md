@@ -107,8 +107,9 @@ Topic-named, no week prefixes, same as laar61400 and laar64150.
 Rhino 8 and Grasshopper are course requirements from Week 2; the software cards for them in
 `index.html` are copied verbatim from laar61400's logistics grid.
 
-- `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, install Git and
-  Claude Code, Claude makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
+- Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
+- `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, Claude Code once in a
+  terminal (the only terminal use), then Claude desktop's Code tab installs Git and makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
   rule: every milestone is a Git tag (`D1`…`D10`) on the student's public repo; the tagged commit
   is the submission. Stated once in `index.html` Assignments ("Submission").
 - `coding-101.html` (WS02, "Reading a Script") — the lab half of the Coding 101 session, **six steps
