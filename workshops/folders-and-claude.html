@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folders and Claude — Arch 51580</title>
+  <link rel="stylesheet" href="/agentic-design-workflows/assets/css/main.css">
+  <link rel="stylesheet" href="/agentic-design-workflows/assets/css/workflow-shared.css">
+  <style>
+    /* copy-paste code block. No line numbers and no decoration inside <pre>:
+       whatever is in there is exactly what lands on the student's clipboard. */
+    .ws-code{position:relative;border:1px solid var(--line);border-radius:6px;background:var(--gray-100);
+      padding:14px 16px;margin:12px 0 4px;overflow-x:auto;}
+    .ws-code pre{margin:0;font:400 13.5px/1.75 var(--font-mono);color:var(--gray-900);white-space:pre;}
+    .ws-code__label{display:block;font:700 10px/1 var(--font-mono);letter-spacing:.12em;
+      text-transform:uppercase;color:var(--gray-500);margin-bottom:9px;padding-right:70px;}
+    .ws-copy{position:absolute;top:9px;right:9px;appearance:none;cursor:pointer;
+      border:1px solid var(--line);background:#fff;color:var(--gray-700);border-radius:999px;
+      font:600 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;
+      padding:7px 11px;transition:.15s;}
+    .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
+    .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
+  </style>
+</head>
+<body>
+
+  <!-- Side panel -->
+  <nav id="sidepanel">
+    <a class="panel-brand" href="/agentic-design-workflows/index.html">
+      <span class="panel-brand-title">Arch 51580</span>
+      <span class="panel-brand-sub">Agentic Design Workflows</span>
+    </a>
+    <div class="panel-section">
+      <span class="panel-section-label">Lectures</span>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/computational-thinking.html">A History of Computational Thinking</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/web-coding-literacy.html">Web Coding Literacy</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/cybernetics-and-design.html">Cybernetics and Design</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/graphic-design-101.html">Graphic Design 101</a>
+    </div>
+    <div class="panel-section">
+      <span class="panel-section-label">Workshops</span>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/github-setup.html"><span class="panel-link-num">01</span>Your First Repository</a>
+      <a class="panel-link active" href="/agentic-design-workflows/workshops/folders-and-claude.html"><span class="panel-link-num">02</span>Folders and Claude</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/coding-101.html"><span class="panel-link-num">03</span>Reading a Script</a>
+    </div>
+    <div class="panel-section">
+      <span class="panel-section-label">Reference</span>
+      <a class="panel-link" href="https://zihaozhang.cc/talks/agents-in-practice/" target="_blank" rel="noopener">Agents in Practice &#8599;</a>
+      <a class="panel-link" href="https://www.anthropic.com/learn" target="_blank" rel="noopener">Anthropic Academy &#8599;</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <div class="page-inner">
+<div class="wf-wrap wf-doc">
+
+  <!-- Header -->
+  <div class="wf-header">
+    <div class="wf-index">WS02</div>
+    <div class="wf-header-text">
+      <div class="wf-title">Folders and Claude</div>
+      <div class="wf-subtitle">A folder Claude can read &middot; CLAUDE.md &middot; a tasks folder &middot; a bio page, live</div>
+    </div>
+  </div>
+
+  <!-- Spec strip -->
+  <div class="wf-spec">
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; GitHub Pages</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">A photo and a short bio</span></div>
+  </div>
+
+  <!-- Learning objectives -->
+  <div class="wf-objectives">
+    <strong>Learning Objectives</strong>
+    <ul>
+      <li>Treating the folder as the agent&rsquo;s memory</li>
+      <li>Writing work down as tasks a later session can pick up</li>
+      <li>Naming files so they explain themselves</li>
+    </ul>
+  </div>
+
+  <!-- Assignment -->
+  <div class="wf-outcome">
+    <strong>Assignment</strong><span>A one-page bio site, live on GitHub Pages and tagged <code>D1</code>, built by a fresh Claude session from your CLAUDE.md and a task file.</span>
+  </div>
+
+  <!-- Pipeline strip -->
+  <div class="wf-pipeline">
+    <div class="wf-pipe-step"><div class="wf-pipe-node">_source</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">CLAUDE.md</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">tasks/</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">New session</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Pages</div></div>
+  </div>
+
+  <!-- Intro -->
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">Claude forgets every conversation when the session ends. The folder is what lasts. Today you set up a folder that tells a new session everything it needs: what the project is, where things are, and what to do next.</div>
+    <div class="wf-step-desc">By the end of class your site is live: one page, your name, your photo, your bio. The rest of Part I builds on it.</div>
+  </div>
+
+  <!-- Steps -->
+  <div class="wf-steps">
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">01</span>
+        <span class="wf-step-label">Bring Your Material</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Open your <code>arch51580-site</code> folder from Workshop 01. Inside it, make a folder called <code>_source</code> and put in what your site will draw on:</div>
+        <ul class="wf-tips">
+          <li><strong>A photo of you</strong>, or one image of your work.</li>
+          <li><strong>A short bio</strong>: a paragraph in a text file. Rough is fine; Claude will ask you about it.</li>
+          <li><strong>Your CV</strong>, if you have one handy.</li>
+        </ul>
+        <div class="wf-step-desc">Give every file a name that says what it is. Claude reads names before it opens anything.</div>
+        <div class="ws-code">
+          <span class="ws-code__label">a folder Claude can read at a glance</span>
+          <pre>arch51580-site/
+├─ README.md
+└─ _source/
+   ├─ portrait.jpg
+   ├─ bio.md
+   └─ cv.pdf</pre>
+        </div>
+        <ul class="wf-tips">
+          <li><code>IMG_4471.jpg</code> and <code>bio final v2 (1).docx</code> make Claude open every file to find out what it is. <code>portrait.jpg</code> and <code>bio.md</code> answer the question before it is asked.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">02</span>
+        <span class="wf-step-label">Let Claude Write CLAUDE.md</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Every Claude session starts blank. Last week&rsquo;s conversation is gone; the files in the folder stay. So anything Claude should know next time goes into a file it reads at the start of every session: <code>CLAUDE.md</code>, at the root of the folder.</div>
+        <div class="wf-step-desc">You talk, Claude writes it. Open the folder in the Code tab of Claude desktop and paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Interview me about this website, one question at a time: who I am,
+what the site is for, which pages it needs, and how this folder is
+organized. Then write a CLAUDE.md at the root of this folder. Keep it
+under 40 lines and show it to me before you build anything. Keep
+_source out of Git; it holds originals.</pre>
+        </div>
+        <div class="wf-step-desc">Read what it wrote and correct it in words. The file is yours; Claude is the one typing.</div>
+        <div class="ws-predict">
+          <strong>Check</strong>
+          <span>Close the session and open a new one in the same folder. Ask: <em>&ldquo;What is this project, and how is it organized?&rdquo;</em> If the answer is wrong, fix the file, then ask again.</span>
+        </div>
+        <ul class="wf-tips">
+          <li>CLAUDE.md holds what Claude cannot work out by reading the files: what the site is for, the folder map, rules you have decided.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Make a tasks Folder</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">A conversation is good for steering today&rsquo;s work. A task you want done later belongs in a file. Make a folder called <code>tasks</code>, and ask Claude to add the first one:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Make a tasks folder. Add a file tasks/01-bio-page.md describing one
+task: a single index.html page with my name, my photo from _source,
+and my bio. Plain HTML and CSS in one file. Then add a line to
+CLAUDE.md saying that open tasks live in tasks/ and finished ones move
+to tasks/done/.</pre>
+        </div>
+        <div class="wf-step-desc">Open the task file and read it. Add anything you care about: a font you like, a site you admire, a color to avoid.</div>
+        <ul class="wf-tips">
+          <li>One task per file, numbered so the order is clear: <code>01-bio-page.md</code>, <code>02-project-page.md</code>.</li>
+          <li>Ideas you have between sessions go straight into <code>tasks/</code>. The folder becomes your to-do list, and Claude can read it.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">A New Session Does the Task</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Start a fresh session in the same folder. It knows nothing except what is in the files, which is the point.</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Read CLAUDE.md and tasks/. Do the first open task, open a preview,
+and move the task to tasks/done/ when I approve it.</pre>
+        </div>
+        <div class="wf-step-desc">Look at the preview and correct it in plain words: a bigger name, a quieter color, more space around the photo.</div>
+        <div class="ws-predict">
+          <strong>Before you approve</strong>
+          <span>Did Claude follow CLAUDE.md and the task file, or only what you said in the chat? Look for one detail from the task file in the page.</span>
+        </div>
+        <ul class="wf-tips">
+          <li>Corrected the same thing twice? Ask: <em>&ldquo;Add that to CLAUDE.md.&rdquo;</em> The next session reads the file, so the file is where a decision lasts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">05</span>
+        <span class="wf-step-label">Push It</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">The page is on your laptop. Send it to GitHub:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Commit everything except _source and push it.</pre>
+        </div>
+        <div class="wf-step-desc">Open <code>github.com/username/arch51580-site</code> and check that <code>index.html</code> and <code>CLAUDE.md</code> are there, and <code>_source</code> is not.</div>
+        <ul class="wf-tips">
+          <li>A public repository shows every file in it. Keep anything private out of the folder, or in <code>_source</code>, which Git now skips.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">06</span>
+        <span class="wf-step-label">Turn On GitHub Pages</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">GitHub holds your files. <strong>Pages</strong> turns them into a website. Do this one by hand, once, so you know where the switch is:</div>
+        <ul class="wf-tips">
+          <li>On your repository page, open <strong>Settings</strong>, then <strong>Pages</strong> in the left column.</li>
+          <li>Under <strong>Build and deployment</strong>, set <strong>Source</strong> to <strong>Deploy from a branch</strong>.</li>
+          <li>Set the branch to <strong>main</strong> and the folder to <strong>/ (root)</strong>. Click <strong>Save</strong>.</li>
+          <li>Wait a minute or two and refresh. The top of the page shows <strong>Your site is live at</strong> and a link.</li>
+        </ul>
+        <div class="wf-step-desc">Open it: <code>username.github.io/arch51580-site</code>. Open it on your phone too. From now on every push updates the site within a minute or two.</div>
+        <ul class="wf-tips">
+          <li>Still a 404 after a few minutes? Check that the file is named exactly <code>index.html</code>, at the top of the repository. Pages looks for that name.</li>
+          <li>The <strong>Actions</strong> tab shows each publish as it runs. A red mark there means it failed; paste the message to Claude.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">07</span>
+        <span class="wf-step-label">Hand It In</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Tag the latest commit D1 and push the tag.</pre>
+        </div>
+        <div class="wf-step-desc">Give the link to the instructor. It will be opened in class.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ongoing -->
+  <div class="wf-ongoing">
+    <strong>Feeds forward</strong><span>Every page you add this semester starts as a file in <code>tasks/</code>. In Week 3 you add type, grid and color the same way; in Part II your own project gets its own folder and its own tasks.</span>
+  </div>
+
+</div>
+    </div>
+  </main>
+
+  <script src="/agentic-design-workflows/assets/js/nav.js"></script>
+  <script src="/agentic-design-workflows/assets/js/wf-progress.js"></script>
+  <script>
+  /* Copy buttons on every code block. The <pre> holds exactly what students
+     should get — no line numbers, no decoration — so copy its text verbatim. */
+  (function () {
+    document.querySelectorAll('.ws-code').forEach(function (box) {
+      var pre = box.querySelector('pre');
+      if (!pre) return;
+      var btn = document.createElement('button');
+      btn.className = 'ws-copy';
+      btn.type = 'button';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function () {
+        var text = pre.innerText;
+        var done = function () {
+          btn.textContent = 'Copied';
+          btn.classList.add('is-done');
+          setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('is-done'); }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else { fallback(); }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.cssText = 'position:fixed;top:-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Select it'; }
+          document.body.removeChild(ta);
+        }
+      });
+      box.appendChild(btn);
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -107,7 +107,7 @@ Topic-named, no week prefixes, same as laar61400 and laar64150.
 ## Workshops (`workshops/`)
 `.wf-doc` layout + `wf-progress.js`, same conventions as laar61400's `workflows/` (see its CLAUDE.md,
 "WF page conventions"). Named `workshops/` here because that is what the syllabus calls them.
-Rhino 8 and Grasshopper are course requirements from Week 2; the software cards for them in
+Rhino 8 and Grasshopper are course requirements from Week 9; the software cards for them in
 `index.html` are copied verbatim from laar61400's logistics grid.
 
 - Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
@@ -115,11 +115,16 @@ Rhino 8 and Grasshopper are course requirements from Week 2; the software cards 
   terminal (the only terminal use), then Claude desktop's Code tab installs Git and makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
   rule: every milestone is a Git tag (`D1`…`D10`) on the student's public repo; the tagged commit
   is the submission. Resubmit = new suffixed tag (`D3-r1`), never a moved tag; push time is the timestamp. Stated once in `index.html` Assignments ("Submission").
-- `coding-101.html` (WS02, "Reading a Script") — the lab half of the Coding 101 session, **six steps
+- `folders-and-claude.html` (WS02, "Folders and Claude") — Week 2, adapted from the Agents in
+  Practice talk's "context through folder structure" part and its Try-Context guide. `_source/` →
+  CLAUDE.md by interview → `tasks/` → a fresh session does the task → push → GitHub Pages turned on
+  by hand in Settings → tag `D1`. Every student has a live bio page by the end of Week 2. The
+  `tasks/` folder replaces the old BUILDSPEC milestones for both the site and the Part II project.
+- `coding-101.html` (WS03, "Reading a Script") — Week 9, mid-semester, **six steps
   in Grasshopper**: an input is a variable → a loop over a List-access input → choose, and the 8.33
-  trap → write the spec → read what came back → check before you bake. Header chip is `WS02`.
+  trap → write the spec → read what came back → check before you bake. Header chip is `WS03`.
   Carries no dates; the one deliverable is named in the `.wf-outcome` box.
-  - The intro lists the **five moves**; `index.html`'s Week 2 row names them too. Keep both in sync.
+  - The intro lists the **five moves**; `index.html`'s Week 9 row names them too. Keep both in sync.
   - **Every code block is copy-paste ready**, because students copy from the page rather than
     retype. The `<pre>` holds exactly what lands on the clipboard: no line numbers, no decoration.
     `.ws-copy` buttons are added by an inline script at the end of the page (Clipboard API with an
@@ -145,7 +150,8 @@ needed (it is not wired up for this course yet — `COURSE` in that script is la
   `.syllabus-body` label between them.
 - `_course/proposal.md` in the factory is the **frozen record of what was submitted** (Sep 2026).
   This page is the source of truth for the schedule going forward; the two have diverged on purpose
-  and are not to be hand-synced. The divergence: Coding 101 was added as Week 2, pushing web coding
+  and are not to be hand-synced. The divergence (Nov 2026 rework): Week 2 is Folders and Claude with the site live, the workflow audit
+  moved into D6, BUILDSPEC milestones became tasks folders, and Reading a Script moved to Week 9. Earlier: Coding 101 was added as Week 2, pushing web coding
   to Week 3 (where Graphic Design 101 joins it) and context to Week 4. Every milestone D1–D6
   kept its proposed week. The Guest Lectures section was removed Nov 2026 (not confirmed).
 - **Boilerplate re-synced to laar61400 verbatim (Nov 2026)**, incl. its Public Safety block and site footer,
