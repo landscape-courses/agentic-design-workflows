@@ -28,7 +28,7 @@
       border:2px solid var(--accent);border-radius:3px;}
     .gd-checklist li b{color:var(--mute);font-weight:600;font-family:var(--font-mono);font-size:.82em;}
 
-    /* ── schematic two-up mocks (slides 9 & 12), d1-fix-it page idiom ── */
+    /* ── schematic two-up mocks (slides 9 & 12), fix-it page idiom ── */
     .gd-mock{width:min(860px,94%);display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3cqw,38px);align-items:start;}
     .gd-mock figure{margin:0;}
     .gd-mock figcaption{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);
@@ -241,7 +241,7 @@
     .gd-type__ok{color:var(--accent);font-weight:700;}
     @media(max-width:560px){.gd-type__grid{grid-template-columns:1fr;}}
 
-    /* ===== widget: D1 fix-it ===== */
+    /* ===== widget: fix-it ===== */
     .gd-fix,.gd-fix *{box-sizing:border-box;}
     .gd-fix{width:min(820px,94cqw);display:flex;flex-direction:column;gap:18px;align-items:center;}
     .gd-fix__page{width:100%;aspect-ratio:17/11;background:#fff;border:1px solid var(--line);
@@ -822,7 +822,7 @@
               </div>
             </div>
 
-            <!-- 21 · D1 fix-it -->
+            <!-- 21 · fix-it -->
             <div class="slide" data-cap="Putting it together — fix a page" data-notes="No new principles — this is the repair process. Take one messy page and fix it in four moves, each a thing we already learned: align (snap to grid) → hierarchy (one anchor dominates, size sets order) → white space (margins, breathe) → color (limited palette, one accent). Step through the widget. This sequence IS the checklist you run on every page.">
               <div class="embed">
                 <div class="gd-fix">
@@ -1160,7 +1160,7 @@
     document.querySelectorAll('.gd-type').forEach(init);
   })();
 
-  /* D1 fix-it */
+  /* fix-it */
   (function(){
     var STEPS=[
       {cls:'is-align',cap:'<b>Align</b> — snap every edge to the grid. Same content, instantly less amateur.'},
