@@ -130,12 +130,13 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
   CLAUDE.md by interview → `tasks/` → a fresh session does the task → push → GitHub Pages turned on
   by hand in Settings → tag `week-02`. Every student has a live bio page by the end of Week 2. The
   `tasks/` folder replaces the old BUILDSPEC milestones for both the site and the Part II project.
-- `folder-audit.html` (Week 07 chip, "Auditing the Folder") — Week 7, the midterm transition, adapted from the
-  Agents in Practice talk's "context through folder structure" part and Try-Context step C3. Fresh session
-  says what it thinks the project is → student reads CLAUDE.md → Claude audits CLAUDE.md and the design
-  system (proposes, applies nothing until approved) → review the cuts → clean `tasks/` → ask again → a
-  Part II project page holding the proposal → tag `week-07`. Wraps up the site so students can keep it on
-  their own; the workflow audit itself is the Week 8 milestone, in its own repository.
+- `folder-audit.html` (Week 07 chip, "Aligning with Claude") — Week 7, the midterm transition. Short by
+  design: why aligning is needed, then one prompt. Claude reads the folder, says what it thinks the project
+  is, then interviews the student one question at a time in three rounds (purpose → structure → design),
+  proposing edits after each round and applying only what is approved; then sorts `tasks/` and builds the
+  Part II project page from the student's answers. Step 02: fresh-session check, tag `week-07`. Wraps up
+  the site so students can keep it on their own; the workflow audit itself is the Week 8 milestone, in its
+  own repository.
 - `coding-101.html` (Week 09 chip, "Reading a Script") — Week 9, mid-semester, **six steps
   in Grasshopper**: an input is a variable → a loop over a List-access input → choose, and the 8.33
   trap → write the spec → read what came back → check before you bake. Header chip is `WEEK 09`.

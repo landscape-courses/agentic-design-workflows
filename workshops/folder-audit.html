@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auditing the Folder — Arch 51580</title>
+  <title>Aligning with Claude — Arch 51580</title>
   <link rel="stylesheet" href="/agentic-design-workflows/assets/css/main.css">
   <link rel="stylesheet" href="/agentic-design-workflows/assets/css/workflow-shared.css">
   <style>
@@ -20,11 +20,6 @@
       padding:7px 11px;transition:.15s;}
     .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
     .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
-    /* the predict-first box */
-    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
-      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
-    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
-    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
   </style>
 </head>
 <body>
@@ -46,7 +41,7 @@
       <span class="panel-section-label">Workshops</span>
       <a class="panel-link" href="/agentic-design-workflows/workshops/github-setup.html"><span class="panel-link-num">01</span>Your First Repository</a>
       <a class="panel-link" href="/agentic-design-workflows/workshops/folders-and-claude.html"><span class="panel-link-num">02</span>Folders and Claude</a>
-      <a class="panel-link active" href="/agentic-design-workflows/workshops/folder-audit.html"><span class="panel-link-num">07</span>Auditing the Folder</a>
+      <a class="panel-link active" href="/agentic-design-workflows/workshops/folder-audit.html"><span class="panel-link-num">07</span>Aligning with Claude</a>
       <a class="panel-link" href="/agentic-design-workflows/workshops/coding-101.html"><span class="panel-link-num">09</span>Reading a Script</a>
     </div>
     <div class="panel-section">
@@ -66,8 +61,8 @@
   <div class="wf-header">
     <div class="wf-index">WEEK 07</div>
     <div class="wf-header-text">
-      <div class="wf-title">Auditing the Folder</div>
-      <div class="wf-subtitle">What Claude reads &middot; CLAUDE.md audited &middot; tasks cleaned &middot; a project page for Part II</div>
+      <div class="wf-title">Aligning with Claude</div>
+      <div class="wf-subtitle">One interview, from purpose to structure to design &middot; a project page for Part II</div>
     </div>
   </div>
 
@@ -76,43 +71,33 @@
     <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
     <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop</span></div>
     <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your site folder, a Part II idea</span></div>
-    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Site audited, tagged <code>week-07</code></span></div>
+    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Site aligned, tagged <code>week-07</code></span></div>
   </div>
 
   <!-- Learning objectives -->
   <div class="wf-objectives">
     <strong>Learning Objectives</strong>
     <ul>
-      <li>Reading the folder the way the agent reads it</li>
+      <li>The agent knows only what the folder says</li>
+      <li>Aligning from purpose down to detail</li>
       <li>One home for every fact</li>
-      <li>Judging an agent&rsquo;s cuts before they land</li>
     </ul>
   </div>
 
   <!-- Assignment -->
   <div class="wf-outcome">
-    <strong>Assignment</strong><span>Your site, audited so a fresh session describes it the way you do, with a Part II project page holding your proposal, tagged <code>week-07</code>.</span>
+    <strong>Assignment</strong><span>Your site, aligned so a fresh session describes it the way you do, with a Part II project page holding your proposal, tagged <code>week-07</code>.</span>
   </div>
 
   <!-- Ongoing -->
   <div class="wf-ongoing">
-    <strong>Ongoing</strong><span>The site is yours to keep after this. Run the audit whenever a new session gets something wrong twice.</span>
-  </div>
-
-  <!-- Pipeline strip -->
-  <div class="wf-pipeline">
-    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Ask</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node">CLAUDE.md</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node">Audit</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node">tasks/</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Ask again</div><div class="wf-pipe-arrow">&rarr;</div></div>
-    <div class="wf-pipe-step"><div class="wf-pipe-node">Project page</div></div>
+    <strong>Ongoing</strong><span>The site is yours to keep after this. Align again whenever a new session gets something wrong twice.</span>
   </div>
 
   <!-- Intro -->
   <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
-    <div class="wf-step-desc">Six weeks in, your folder holds a CLAUDE.md from Week 2, a design system from Week 4, a skill from Week 6, project pages, and tasks finished and abandoned. Rules got stated twice and drifted apart. Claude still follows lines you stopped meaning.</div>
-    <div class="wf-step-desc">Today you read what the agent reads and make it say what you mean now. Then the site gets one more page: the home of your Part II project.</div>
+    <div class="wf-step-desc">Every session starts blank and learns your project from the folder. Six weeks of sessions have each added a line: a rule in CLAUDE.md, a decision in the design system, a task half done. Some were written twice and drifted apart. Some you stopped meaning. Claude still follows all of them.</div>
+    <div class="wf-step-desc">Aligning brings the folder back to what you mean now. Claude reads everything, then interviews you, from the big picture down to the details, and rewrites the files from your answers. You approve every change.</div>
   </div>
 
   <!-- Steps -->
@@ -121,18 +106,49 @@
     <div class="wf-step wf-full">
       <div class="wf-step-head">
         <span class="wf-step-num">01</span>
-        <span class="wf-step-label">Ask Claude What It Thinks</span>
+        <span class="wf-step-label">Align</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">Open your <code>username.github.io</code> folder in the Code tab of Claude desktop and start a fresh session. Ask:</div>
+        <div class="wf-step-desc">Open your <code>username.github.io</code> folder in the Code tab of Claude desktop, start a fresh session, and paste:</div>
         <div class="ws-code">
           <span class="ws-code__label">prompt to Claude</span>
-          <pre>What is this project, how is it organized, and what rules do you
-follow when you work on it? Answer from the files only.</pre>
+          <pre>Let's align this folder with what I mean now, so any fresh session
+works on this site the way I would.
+
+First read everything a session reads: CLAUDE.md, the design system,
+any skills, tasks/, and the site's pages. Tell me in five lines what
+you think this project is and how it works.
+
+Then interview me, one question at a time, in three rounds:
+1. Purpose: who the site is for, what a visitor should come away
+   with, what it leaves out.
+2. Structure: what each file and folder holds, where a new page
+   goes, how tasks/ is used.
+3. Design: type, grid, color and images, one decision at a time.
+Ask from what you found, starting where the files contradict each
+other or the site.
+
+After each round, propose edits from my answers:
+- Give each fact one home. Where a rule is stated twice, keep one
+  and point to it.
+- Cut what you can learn by reading the files.
+- Phrase every rule as what to do.
+- Move anything a session needs only sometimes out of CLAUDE.md into
+  its own file, and point to it.
+List each change with its file and why. Apply nothing until I
+approve.
+
+When the rounds are done, sort tasks/: move finished ones to
+tasks/done/ and ask me before deleting any.
+
+Last, add a task and build projects/part-two.html, linked from the
+home page, holding my Part II proposal: the problem, my current
+workflow, the track, and what success looks like. Ask me for each
+part and use my words.</pre>
         </div>
-        <div class="wf-step-desc">Read the answer against what you mean today. Write every mismatch into <code>_source/audit-notes.md</code>: a rule you dropped, a page it does not know about, a folder it describes wrong.</div>
         <ul class="wf-tips">
-          <li>The answer is a picture of what the agent reads. Where it is wrong, a file is wrong.</li>
+          <li>Answer in your own words, briefly. A short answer you mean beats a long one you do not.</li>
+          <li>Before you approve a cut, ask: would a new session still do this right?</li>
         </ul>
       </div>
     </div>
@@ -140,123 +156,16 @@ follow when you work on it? Answer from the files only.</pre>
     <div class="wf-step wf-full">
       <div class="wf-step-head">
         <span class="wf-step-num">02</span>
-        <span class="wf-step-label">Read CLAUDE.md Yourself</span>
+        <span class="wf-step-label">Check and Hand It In</span>
       </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">Open <code>CLAUDE.md</code> and read every line. It was written in Week 2 and patched since. Mark three kinds of line in your notes:</div>
-        <ul class="wf-tips">
-          <li><strong>Stale</strong>: a fact that was true in Week 3 and is not now.</li>
-          <li><strong>Repeated</strong>: a rule that also lives in your design system or a skill, often worded differently.</li>
-          <li><strong>Dropped</strong>: a rule you stopped following weeks ago.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="wf-step wf-full">
-      <div class="wf-step-head">
-        <span class="wf-step-num">03</span>
-        <span class="wf-step-label">Run the Audit</span>
-      </div>
-      <div class="wf-step-body">
-        <div class="wf-step-desc">Now Claude reads the same files with your notes beside it. It proposes; you decide.</div>
+        <div class="wf-step-desc">Close the session, open a new one, and ask what the project is. The answer should match what you said in the interview. Where it does not, fix the file. Then:</div>
         <div class="ws-code">
           <span class="ws-code__label">prompt to Claude</span>
-          <pre>Audit CLAUDE.md and the design system against the files in this
-folder and my notes in _source/audit-notes.md.
-- Cut anything you can learn by reading the files.
-- Give each fact one home. Where a rule is stated twice, keep one
-  and point to it from the other.
-- Phrase every rule as what to do.
-- Flag facts that no longer match the folder.
-List every change with the line it touches and why. Apply nothing
-until I approve.</pre>
+          <pre>Commit everything, push, then tag the latest commit week-07 and
+push the tag.</pre>
         </div>
-        <ul class="wf-tips">
-          <li>CLAUDE.md loads into every session, so every line costs attention. Shorter is better when nothing you rely on is lost.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="wf-step wf-full">
-      <div class="wf-step-head">
-        <span class="wf-step-num">04</span>
-        <span class="wf-step-label">Review the Cuts</span>
-      </div>
-      <div class="wf-step-body">
-        <div class="wf-step-desc">Go through the list one change at a time. Approve, reject, or reword in plain words. Then ask Claude to apply what you approved.</div>
-        <div class="ws-predict">
-          <strong>Catch this one</strong>
-          <span>A cut that removes a rule you rely on. Claude can only see what the files say, so it will cut a rule the files seem to cover. For each cut, ask: would a new session still do this right?</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="wf-step wf-full">
-      <div class="wf-step-head">
-        <span class="wf-step-num">05</span>
-        <span class="wf-step-label">Clean tasks/</span>
-      </div>
-      <div class="wf-step-body">
-        <div class="wf-step-desc">Open tasks need the same audit. Finished ones belong in <code>tasks/done/</code>; abandoned ones go.</div>
-        <div class="ws-code">
-          <span class="ws-code__label">prompt to Claude</span>
-          <pre>List every file in tasks/ with one line on whether it is done, open,
-or abandoned, judged from the site as it is now. Move done ones to
-tasks/done/. Ask me before deleting anything.</pre>
-        </div>
-        <ul class="wf-tips">
-          <li>An abandoned task a fresh session picks up is a page you did not want, built carefully.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="wf-step wf-full">
-      <div class="wf-step-head">
-        <span class="wf-step-num">06</span>
-        <span class="wf-step-label">Check Again</span>
-      </div>
-      <div class="wf-step-body">
-        <div class="wf-step-desc">Close the session, open a new one, and ask the question from step 01 again.</div>
-        <div class="ws-predict">
-          <strong>Check</strong>
-          <span>The answer should now match what you mean. Where it does not, fix the file and ask once more.</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="wf-step wf-full">
-      <div class="wf-step-head">
-        <span class="wf-step-num">07</span>
-        <span class="wf-step-label">Add the Project Page</span>
-      </div>
-      <div class="wf-step-body">
-        <div class="wf-step-desc">Part I built the site. Part II is your own project, and the site is where it lives. Add one page for it now, as a task:</div>
-        <div class="ws-code">
-          <span class="ws-code__label">prompt to Claude</span>
-          <pre>Add a task tasks/NN-project-page.md: a page projects/part-two.html
-following the design system, linked from the home page. It holds my
-Part II proposal: the problem, my current workflow, the track, and
-what success looks like. Then do the task and open a preview.</pre>
-        </div>
-        <div class="wf-step-desc">Write the proposal in your own words; Claude places it. The page grows all of Part II: each milestone adds to it.</div>
-        <ul class="wf-tips">
-          <li>Rename <code>part-two.html</code> to your project&rsquo;s name once it has one. Names are context.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="wf-step wf-full">
-      <div class="wf-step-head">
-        <span class="wf-step-num">08</span>
-        <span class="wf-step-label">Hand It In</span>
-      </div>
-      <div class="wf-step-body">
-        <div class="ws-code">
-          <span class="ws-code__label">prompt to Claude</span>
-          <pre>Commit everything except _source, push, then tag the latest commit
-week-07 and push the tag.</pre>
-        </div>
-        <div class="wf-step-desc">Week 7 is the whole midterm: the audited site, the project page with your proposal, and your AI Fluency certificate. Bring the link to the pin-up.</div>
+        <div class="wf-step-desc">Week 7 is the whole midterm: the aligned site, the project page with your proposal, and your AI Fluency certificate. Bring the link to the pin-up.</div>
       </div>
     </div>
 
@@ -264,7 +173,7 @@ week-07 and push the tag.</pre>
 
   <!-- Feeds forward -->
   <div class="wf-ongoing">
-    <strong>Feeds forward</strong><span>In Week 8 your workflow gets its own repository, with its own CLAUDE.md and tasks. It starts from the habits this audit taught.</span>
+    <strong>Feeds forward</strong><span>In Week 8 your workflow gets its own repository. Start it with the same interview.</span>
   </div>
 
 </div>
