@@ -19,6 +19,11 @@ Students write one brief per project page; the main session hands each to a Sonn
 afterwards asks two questions: did the agent miss, or did the brief?
 Learning objective that transfers: the quality of delegated work is set by the brief.
 
+## Model and effort per role
+Budget is part of the brief. The lead session runs Opus because it plans and reviews; the builders run
+Sonnet because they write code from a clear brief. Lower effort for mechanical work. Recap the Week 1
+token rules: never empty the weekly limit; plan around the five-hour window.
+
 ## Ways of working with agents (second part)
 Students meet multiple agents here, in the first half, on pages they already know. The week teaches
 the ways to work with agents, each named for when to reach for it.
