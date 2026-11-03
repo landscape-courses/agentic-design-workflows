@@ -111,7 +111,7 @@ Rhino 8 and Grasshopper are course requirements from Week 2; the software cards 
 - `github-setup.html` (WS01, "Your First Repository") — Week 1. GitHub account, Claude Code once in a
   terminal (the only terminal use), then Claude desktop's Code tab installs Git and makes and pushes `arch51580-site`, then tags it `ws01`. Sets the submission
   rule: every milestone is a Git tag (`D1`…`D10`) on the student's public repo; the tagged commit
-  is the submission. Stated once in `index.html` Assignments ("Submission").
+  is the submission. Resubmit = new suffixed tag (`D3-r1`), never a moved tag; push time is the timestamp. Stated once in `index.html` Assignments ("Submission").
 - `coding-101.html` (WS02, "Reading a Script") — the lab half of the Coding 101 session, **six steps
   in Grasshopper**: an input is a variable → a loop over a List-access input → choose, and the 8.33
   trap → write the spec → read what came back → check before you bake. Header chip is `WS02`.
