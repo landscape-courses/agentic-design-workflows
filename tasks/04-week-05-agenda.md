@@ -1,10 +1,10 @@
-# Week 05 agenda: Design and Build
+# Week 05 agenda: Many Agents
 
 **Goal.** Fill out `workshops/design-and-build.html`, now a stub, as the Week 05 agenda: each part of the class
 under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
 
 ## From the syllabus (`index.html`, Week 05 row)
-- Topic: Project pages with more than one agent: a main session that leads and reviews design, Sonnet agents it spawns to write the code; fork and side chat; local preview; images for the web; domains and DNS (optional); desk crits
+- Topic: A main session that leads and reviews design, Sonnet agents it spawns to write the code; side chats sent back to main; forking to compare two directions; when to use which, and when to reach for a tasks folder instead; images for the web; desk crits
 - Due: two project pages, tagged `week-05`.
 - No lecture this week.
 

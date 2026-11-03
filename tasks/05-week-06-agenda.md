@@ -4,7 +4,7 @@
 under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
 
 ## From the syllabus (`index.html`, Week 06 row)
-- Topic: turning repeated instructions into a reusable skill or pipeline; the image standard as a worked example; desk crits
+- Topic: Said it three times: turn a repeated instruction into a skill the agent runs on its own; the image standard as a worked example; desk crits
 - Due: one skill or pipeline, plus a third project published through it, tagged `week-06`.
 - No lecture this week.
 

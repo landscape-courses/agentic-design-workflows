@@ -84,6 +84,15 @@ Meeting day, time and room are "to be set against the Spring 2027 calendar" in `
 Weekly Schedule carries week numbers with no dates. The calendar is not published yet; fill these in
 once it is, in `index.html` only.
 
+## Course frame (Nov 2026)
+Agents are the subject; the website is the by-product. Part I (Weeks 1–7) teaches one way of working
+with an agent each week: First Session · Context through Folders · Checking the Agent's Work ·
+Standards the Agent Follows · Many Agents (lead session reviews, spawned Sonnet agents build; side
+chat sent to main; fork) · Skills · Aligning with Claude. Part II (Weeks 8–13) is light by design:
+desk crits and the student's own development. Each of those weeks the student does one thing and
+has Claude tag it with a message saying what was done; the message is the self-report and the
+week is complete. Week 14 is the graded final. Page filenames kept their old slugs.
+
 ## Lectures (`lectures/`)
 Topic-named, no week prefixes, same as laar61400 and laar64150.
 
@@ -118,7 +127,7 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
 `index.html` are copied verbatim from laar61400's logistics grid.
 
 - Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
-- `github-setup.html` (Week 01 chip, "Your First Repository") — Week 1. GitHub account, Claude desktop's Code tab
+- `github-setup.html` (Week 01 chip, "First Session") — Week 1. GitHub account, Claude desktop's Code tab
   installs Git and the GitHub CLI, one terminal step (`gh auth login`, the step the agent cannot do;
   students do not install terminal Claude Code, the instructor demos it), then Claude makes and pushes `username.github.io` (the repo name that
   gives a site at the root of the student's GitHub address, which outlives the course), then tags it `week-01`. Sets the submission
@@ -127,7 +136,7 @@ Rhino 8 and Grasshopper are course requirements from Week 9; the software cards 
   practice is at least one Claude session a week, pushed and tagged. Resubmit = new suffixed tag
   (`week-03-r1`), never a moved tag; push time is the timestamp. Weeks 7 and 14 are graded on criteria,
   the rest complete / incomplete. Stated once in `index.html` Assignments ("Submission").
-- `folders-and-claude.html` (Week 02 chip, "Folders and Claude") — Week 2, adapted from the Agents in
+- `folders-and-claude.html` (Week 02 chip, "Context through Folders") — Week 2, adapted from the Agents in
   Practice talk's "context through folder structure" part and its Try-Context guide. `_source/` →
   CLAUDE.md by interview → `tasks/` → a fresh session does the task → push → GitHub Pages turned on
   by hand in Settings → tag `week-02`. Every student has a live bio page by the end of Week 2. The

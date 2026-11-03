@@ -4,14 +4,14 @@
 under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
 
 ## From the syllabus (`index.html`, Week 12 row)
-- Topic: hardening the tool against real inputs; documentation
-- Due: peer feedback worked through as tasks; README documents how to use the tool, tagged `week-12`.
+- Topic: Your own development, at your own pace; crits at the desk
+- Due: one thing done on the tool, tagged `week-12` with a message saying what was done (self-report). Keep the page light: desk crits and open development.
 - No lecture this week.
 
 ## To write
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
-- Steps with copy-ready prompts where students work with Claude; the last step tags `week-12`.
+- A short page: a few prompts students can reach for, not a fixed sequence; the last step tags `week-12`.
 
 ## Done when
 - No "To come" part left; the assignment sentence matches the syllabus Week 12 milestone.

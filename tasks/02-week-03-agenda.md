@@ -1,11 +1,11 @@
-# Week 03 agenda: What a Website Is Made Of
+# Week 03 agenda: Checking the Agent's Work
 
 **Goal.** Fill out `workshops/website-made-of.html`, now a stub, as the Week 03 agenda: each part of the class
 under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
 
 ## From the syllabus (`index.html`, Week 03 row)
-- Topic: HTML, CSS, and JavaScript &mdash; what each does and how they make up a page; type, grid, and color as the design decisions an agent needs written down; each decision written as a task and applied to the live site
-- Due: type, grid and color chosen and applied, each as a task, tagged `week-03`.
+- Topic: HTML, CSS and JavaScript as the literacy to read what the agent wrote; local preview and reading a diff; type, grid and color described precisely enough for the agent to apply, then checked on the live site
+- Due: type, grid and color applied by Claude and checked by you in preview and on the live site, tagged `week-03`.
 - Lecture: `lectures/web-coding-literacy.html` (Web Coding Literacy)
 - Lecture: `lectures/graphic-design-101.html` (Graphic Design 101)
 
