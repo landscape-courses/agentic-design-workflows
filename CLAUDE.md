@@ -69,9 +69,8 @@ the images are copied into `assets/img/`, and this repo is the source of truth.
 
 
 Elective, Spring 2027. Dual-listed Arch 51580 / 61580, Topics in Computational Studies; the folder
-takes the lower number. Factory output of `../../../course-prep/arch51580/`; same authoring rules as
-laar61400 (see `../laar61400/CLAUDE.md`, "Factory output") — **the live page is the source of truth**,
-and fixing output here is the canonical fix.
+takes the lower number. Pages are authored here; **the live page is the source of truth**. Course proposal and flyer
+materials: `_prep/` (local only, gitignored).
 
 **Unlisted.** No card in `teaching/index.html` yet — the pages are live at their URLs and shareable
 by link while the syllabus is tentative. Add the card when the course is confirmed in the catalog.
@@ -100,7 +99,7 @@ Topic-named, no week prefixes, same as laar61400 and laar64150.
   same name (Reading a Script) was deleted later in Nov 2026; Python now appears as a Week 8 live demo.
 
 - Four decks are **copies of laar61400's**, written by
-  `../../../course-prep/scripts/arch51580_reuse_lectures.py`:
+  a one-off copy script (retired):
   `computational-thinking.html` · `web-coding-literacy.html` · `cybernetics-and-design.html` ·
   `graphic-design-101.html`.
   - Copied rather than linked so each page carries **this** course's side panel. A link would have
@@ -160,7 +159,7 @@ after a nav edit, re-run the script for the four copies and sed the hand-authore
 
 ## Syllabus (`index.html`)
 Same `syllabus-section` / `schedule-table` / `grade-breakdown` classes as laar61400's, so
-`course-prep/scripts/syllabus_to_docx.py` can be pointed at it when a school-submission PDF is
+`../_tools/docx/syllabus_to_docx.py` can be pointed at it when a school-submission PDF is
 needed (it is not wired up for this course yet — `COURSE` in that script is laar61400).
 
 - The **Weekly Schedule is two tables**, Part I (Weeks 1–7) and Part II (Weeks 8–14), with a
