@@ -17,7 +17,8 @@ The instructor prepares by talking, often from a phone on the way to work. State
 so every session starts from the files.
 
 - `weeks/00-course.md` holds the whole course: frame, schedule, assignments, grading.
-  `weeks/week-NN.md` holds one week. Each has three sections: **Open** (raised, awaiting a
+  `weeks/week-NN.md` holds one week, created when that week is first discussed. A week with no
+  file has nothing pending and its page is the record. Each has three sections: **Open** (raised, awaiting a
   decision), **Decided** (conclusions), **To build** (decided, and the page has yet to show it).
 - Pre-semester, talk defaults to `00-course.md` and the syllabus is free to change. In semester,
   talk defaults to the coming week's file, "this week" and "next week" resolve from the first-class
@@ -34,8 +35,8 @@ so every session starts from the files.
 
 **Build (建)** starts when the instructor says build, in a fresh session.
 - Read the week file's Decided and To build, plus `workshops/SPEC.md` for a week page or
-  `assets/deck/deck-spec.md` for a deck. Make the page, push, reply with its live URL, and empty
-  To build.
+  `assets/deck/deck-spec.md` for a deck. Make the page, push, reply with its live URL, then clear
+  from the file what the page now shows; delete the file once it is empty.
 - A request such as "add X to this week" in Part II is a new `<li>` at the top of the live log in
   `build-your-tool.html` (marked by a `LIVE LOG` comment), pushed.
 
