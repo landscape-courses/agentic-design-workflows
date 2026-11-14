@@ -1,14 +1,17 @@
-# Week 06 agenda: Skills and Cloud Sessions
+# Week 06: Skills and Cloud Sessions
 
-**Goal.** Fill out `workshops/skills.html`, now a stub, as the Week 06 agenda: each part of the class
-under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
+**Page:** `workshops/skills.html`, a stub until this week is built.
 
-## From the syllabus (`index.html`, Week 06 row)
+## Open
+
+## Decided
+
+### From the syllabus (`index.html`, Week 06 row)
 - Topic: Said it three times: turn a repeated instruction into a skill the agent runs on its own; cloud sessions, started from the Claude app or the web, that work on your GitHub repository while your laptop is closed; branches; how a software team uses pull requests, review and approval, and which of those steps a solo developer can skip; comparing a branch with main and deciding when to merge
 - Due: one task done in a cloud session started from your phone, on a branch, compared with main and merged, tagged `week-06`. A skill is taught but optional; not every project needs one.
 - No lecture this week.
 
-## Content, in class order
+### Content, in class order
 1. **Skills.** Said it three times: make it a skill. The image standard is the worked example.
 2. **Cloud sessions.** A session that runs on GitHub's copy of the repository, in the cloud, started from the
    Claude app or claude.ai/code. It keeps working with the laptop closed; you check in from your phone.
@@ -27,11 +30,8 @@ under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Wo
 - Desktop app and web only, no terminal. Confirm each step in the current Claude app and claude.ai/code UI.
 - Learning objective that transfers: work happens on a copy, and someone reads the difference before it goes live.
 
-## To write
+## To build
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-06`.
-
-## Done when
-- No "To come" part left; the assignment sentence matches the syllabus Week 06 milestone.
-- Move this file to `tasks/done/`.
+- Done when the page has no "To come" part and its assignment sentence matches the syllabus milestone.

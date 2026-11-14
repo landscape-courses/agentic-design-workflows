@@ -1,187 +1,69 @@
-# Agentic Design Workflows — course site
+# Agentic Design Workflows
 
-Repo in the `landscape-courses` org. Served by GitHub Pages at
-`https://landscape-courses.github.io/agentic-design-workflows/` from `main` / root (`.nojekyll`).
-Hand-authored static HTML, no build step. Keep it that way.
+Arch 51580 / 61580, Topics in Computational Studies, an elective taught by Zihao Zhang. Agents are
+the subject and the student's website is the by-product. Part I (Weeks 1–7) teaches one way of
+working with an agent each week. Part II (Weeks 8–14) is one page, `workshops/build-your-tool.html`:
+students build their own tool, class is desk crits, and the page carries a live log. Students use
+the Claude desktop app, so workshop steps stay inside it.
 
-## Working rules (all Claude sessions)
-- **Push straight to `main`.** No PR or review step needed; the repo has a sole owner.
-- **Every internal path starts with `/agentic-design-workflows/`** (the Pages subpath). A bare `/assets/...`
-  breaks on Pages. If a custom domain is added later, sed the prefix away in one pass.
-- **Self-contained.** CSS, JS, deck system and images all live in this repo. Do not link assets
-  from zihaozhang.cc or other course repos; copy them in.
-- Links to Zihao's talks (`https://zihaozhang.cc/talks/...`) are external references, which is fine.
-- Shared chrome (head, side-panel nav) is duplicated per page by design. Propagate nav edits with sed.
-- Images: AVIF, long edge ≤1920. Declare `width`/`height` on every `<img>`, `loading="lazy"` below the fold.
-- Find-and-replace across HTML: sed via Bash, not PowerShell (it double-encodes UTF-8).
-- Nothing private here: the repo is public. Grades, rubrics with student names, student work stay out.
+Public repo in the `landscape-courses` org, served by GitHub Pages from `main` at
+`https://landscape-courses.github.io/agentic-design-workflows/`. Hand-authored static HTML.
 
-## Layout
-- `tasks/` — work queued for a later session, one Markdown file per task, numbered. Finished
-  tasks move to `tasks/done/`. A session asked to "do the next task" starts here.
-- `index.html` — syllabus. `lectures/` — deck pages. `workshops/` — step-by-step lab pages.
-- `assets/deck/` — slide-deck system; `deck-spec.md` is its spec. Read it before touching a deck.
-- `assets/css/` — `tokens.css` (every font and color as a variable; write `var(--…)`, never a hex),
-  `main.css`, `workflow-shared.css`, `footer.css`. `assets/js/` — `nav.js`, `wf-progress.js`.
-- `assets/img/<lecture-slug>/` — lecture images.
+**Semester:** Spring 2027. First class: date pending the college calendar; write it here once set.
+Before that date the course is in pre-semester prep; from it, count the teaching week from today's date.
 
-## Deck rules (from zihao-site)
-- Read `assets/deck/deck-spec.md` before touching a deck; it defines the layouts (`single`, `auto`,
-  `hero-l/r`, `sq`, `points-l/r`, `toc`, `txt-card`/`stmt`/`cmp`) and the phone scroll view.
-- Lectures are standalone: no week numbers in nav, `<title>`, header chip (`LECTURE`), deck title,
-  title-slide stamp, slide text or notes. Refer to another lecture by its title.
-- URL is `lectures/<slug>.html`, images in `assets/img/<slug>/`.
-- Never put `*/` inside a CSS comment: it closes the comment and silently drops every rule after it.
+## How prep works
+The instructor prepares by talking, often from a phone on the way to work. State lives in `weeks/`
+so every session starts from the files.
 
-## Workshop page rules (from zihao-site WF conventions)
-- Layout: `<div class="wf-wrap wf-doc">` plus `wf-progress.js` after `nav.js`. Every step needs a
-  `.wf-step-head` to get a done check; a `.wf-step` without one is a session divider.
-- Labels are weeks, one scheme for everything: workshop header chip `WEEK NN`, nav number = week,
-  git tag `week-NN`. Dates live only in `index.html`. First spec chip is Length ("One class").
-- `workshops/` pages are the weekly agenda (nav section "Weeks"), one per week. A week not yet written is a stub with an `AGENDA` / "To come" part and a ticket in `tasks/`. Each part of the class gets a
-  `.wf-session` divider whose num is its kind — `LECTURE`, `WORKSHOP`, `DISCUSSION` — and whose label is
-  its title. A lecture part is a `wf-nocheck` card linking the deck; the deck stays standalone. A Due chip is the one date a page may repeat; omit it until the
-  Spring 2027 calendar is set.
-- `.wf-objectives`: between spec strip and assignment, one to three short `<li>` phrases, each
-  naming the idea that transfers beyond the software.
-- `.wf-outcome`: one `<strong>Assignment</strong>` label, one sentence, product-framed, format
-  folded in. No separate Deliverable section. Scope CSS as `.wf-outcome > strong`, so `<strong>`
-  inside `.wf-tips` is untouched.
-- Last spec chip is a green Outcome chip, `.wf-spec-item.wf-spec-outcome`: the workshop's outcome
-  in one short phrase. Colors are `--done*` in `tokens.css`.
-- `.wf-ongoing` (optional), directly under the assignment: the semester-long deliverable this feeds.
-- Walkthrough video: a `.wf-step wf-full wf-nocheck` card under its Session label, `▶` as the step
-  number, YouTube iframe in `.wf-video` (16:9 default; set `aspect-ratio` inline otherwise).
-  `wf-nocheck` keeps saved checks in position.
-- Example images: collapsible `<details class="wf-examples">` "Hint" card plus click-to-enlarge
-  lightbox. PNG for flat UI screenshots; JPG only when it actually wins. ffmpeg only.
-- Pages are HTML only; no markdown sources.
-- Copy: short, imperative, no AI-sounding parallel structures. Say what a thing is, not what it
-  is not: no "no X, no Y" lists, no "not A, but B" framing.
+- `weeks/00-course.md` holds the whole course: frame, schedule, assignments, grading.
+  `weeks/week-NN.md` holds one week. Each has three sections: **Open** (raised, awaiting a
+  decision), **Decided** (conclusions), **To build** (decided, and the page has yet to show it).
+- Pre-semester, talk defaults to `00-course.md` and the syllabus is free to change. In semester,
+  talk defaults to the coming week's file, "this week" and "next week" resolve from the first-class
+  date, and a change to the syllabus is raised on its own for a yes.
 
-## Origin
-Migrated Nov 2026 from `zihaoooo/zihao-site` `teaching/arch51580/`. The notes below are that
-folder's teaching context, kept as written. Where they mention `../laar61400/`, the factory
-(`course-prep`), or `/teaching/laar61400/assets/img/`, read: those live outside this repo now;
-the images are copied into `assets/img/`, and this repo is the source of truth.
+**Discuss (议)** is the default for any message about course content.
+- Read the week file first. A passing thought goes into Open with its date, answered in one line.
+- Each decision is restated in one sentence, written to Decided, committed and pushed at once, so
+  the session can end at any moment with everything settled already saved.
+- Replies fit a phone: one question at a time, a few lines, numbered options.
+- Discuss edits `weeks/` only. Close by naming what sits in To build.
+- Student names, grades and classroom observations about individuals belong in the gitignored
+  `_prep/`, on the desktop.
 
----
+**Build (建)** starts when the instructor says build, in a fresh session.
+- Read the week file's Decided and To build, plus `workshops/SPEC.md` for a week page or
+  `assets/deck/deck-spec.md` for a deck. Make the page, push, reply with its live URL, and empty
+  To build.
+- A request such as "add X to this week" in Part II is a new `<li>` at the top of the live log in
+  `build-your-tool.html` (marked by a `LIVE LOG` comment), pushed.
 
+`tasks/` holds work orders that belong to no week.
 
-Elective, Spring 2027. Dual-listed Arch 51580 / 61580, Topics in Computational Studies; the folder
-takes the lower number. Pages are authored here; **the live page is the source of truth**. Course proposal and flyer
-materials: `_prep/` (local only, gitignored).
-
-**Unlisted.** No card in `teaching/index.html` yet — the pages are live at their URLs and shareable
-by link while the syllabus is tentative. Add the card when the course is confirmed in the catalog.
-
-Styles, nav script and the whole `assets/` tree are borrowed from laar61400 by absolute path, the way
-laar64150 does it. This folder has no `assets/` of its own and needs none.
-
-## Dates are deliberately absent
-Meeting day, time and room are "to be set against the Spring 2027 calendar" in `index.html`, and the
-Weekly Schedule carries week numbers with no dates. The calendar is not published yet; fill these in
-once it is, in `index.html` only.
-
-## Course frame (Nov 2026)
-Agents are the subject; the website is the by-product. Part I (Weeks 1–7) teaches one way of working
-with an agent each week: First Session · Context through Folders · Checking the Agent's Work ·
-Standards the Agent Follows · Managing Agents (the brief: goal, scope, resources, when to ask; lead session reviews, spawned Sonnet agents build; side
-chat sent to main; fork) · Skills · Aligning with Claude. Part II (Weeks 8–13) is light by design:
-a live-log page, desk crits and the student's own development. Each of those weeks the student does one thing and
-has Claude tag it with a message saying what was done; the message is the self-report and the
-week is complete. Week 14 is the graded final. Page filenames kept their old slugs.
-
-## Lectures (`lectures/`)
-Topic-named, no week prefixes, same as laar61400 and laar64150.
-
-- `coding-101.html` (lecture) was **deleted Nov 2026**; it did not work in the room. The workshop of the
-  same name (Reading a Script) was deleted later in Nov 2026; Python now appears as a Week 8 live demo.
-
-- Four decks are **copies of laar61400's**, written by
-  a one-off copy script (retired):
-  `computational-thinking.html` · `web-coding-literacy.html` · `cybernetics-and-design.html` ·
-  `graphic-design-101.html`.
-  - Copied rather than linked so each page carries **this** course's side panel. A link would have
-    dropped students into LAAR 61400's nav.
-  - **Images are not copied.** Every `<img>` points at `/teaching/laar61400/assets/img/<slug>/`, so
-    both courses share one asset pool. Keep it that way: an image edit in laar61400 is meant to show
-    up here.
-  - **The copies may diverge**, and are expected to: the elective goes further on agents and context
-    than the required course compresses into one deck. Re-running the script **overwrites** them, so
-    once a copy has elective-specific edits, either stop re-running it for that slug or re-apply the
-    edits after. The script rewrites nav, `<title>`, the title-slide stamp, relative image paths and
-    the deck id; it changes no slide content.
-  - **`computational-thinking.html` has diverged:** its last two slides (the 4D framework, and the
-    share session's weekly lens) are Arch 51580 only. Re-running the reuse script drops them; re-apply after.
-  - Deck ids are `a51-NN`, not laar61400's `wNN` — deck.js keys the speaker-notes passphrase in
-    localStorage (`deck-notes-pass-<id>`) and the Presenter View BroadcastChannel off the id, so a
-    shared id would make the two courses' decks talk over each other.
-
-## Workshops (`workshops/`)
-`.wf-doc` layout + `wf-progress.js`, same conventions as laar61400's `workflows/` (see its CLAUDE.md,
-"WF page conventions"). Named `workshops/` here because that is what the syllabus calls them.
-Rhino 8 and Grasshopper are needed in Part II only if a student's tool works with them; the
-software cards for them in `index.html` are copied from laar61400's logistics grid.
-
-- Students use the **Claude desktop app**, not the terminal. Keep terminal steps out of workshops.
-- `github-setup.html` (Week 01 chip, "First Session") — Week 1. GitHub account, Claude desktop's Code tab
-  installs Git and the GitHub CLI, one terminal step (`gh auth login`, the step the agent cannot do;
-  students do not install terminal Claude Code, the instructor demos it), then Claude makes and pushes `username.github.io` (the repo name that
-  gives a site at the root of the student's GitHub address, which outlives the course), then tags it `week-01`. Sets the submission
-  rule: one graded milestone every week, tagged `week-01`…`week-14` on the repo that week's work is in
-  (the site through Week 7, the workflow repo from Week 8); the tagged commit is the submission. The
-  practice is at least one Claude session a week, pushed and tagged. Resubmit = new suffixed tag
-  (`week-03-r1`), never a moved tag; push time is the timestamp. Weeks 7 and 14 are graded on criteria,
-  the rest complete / incomplete. Stated once in `index.html` Assignments ("Submission").
-- `folders-and-claude.html` (Week 02 chip, "Context through Folders") — Week 2, adapted from the Agents in
-  Practice talk's "context through folder structure" part and its Try-Context guide. `_source/` →
-  CLAUDE.md by interview → `tasks/` → a fresh session does the task → push → GitHub Pages turned on
-  by hand in Settings → tag `week-02`. Every student has a live bio page by the end of Week 2. The
-  `tasks/` folder replaces the old BUILDSPEC milestones for both the site and the Part II project.
-- `folder-audit.html` (Week 07 chip, "Aligning with Claude") — Week 7, the midterm transition. Short by
-  design: why aligning is needed, then one prompt. Claude reads the folder, says what it thinks the project
-  is, then interviews the student one question at a time in three rounds (purpose → structure → design),
-  proposing edits after each round and applying only what is approved; then sorts `tasks/` and builds the
-  Part II project page from the student's answers. Step 02: fresh-session check, tag `week-07`. Wraps up
-  the site so students can keep it on their own; the workflow audit itself is the Week 8 milestone, in its
-  own repository.
-- `build-your-tool.html` (`WEEKS 08–14` chip, "Build Your Own Tool") — all of Part II on one page,
-  one nav entry. Students build their own tool and manage the agents doing the work; class is desk
-  crits; Week 8 opens with two live demos (an agent-written Grasshopper Python plugin, and MCP); Weeks 8–12 are edited on the fly: the "In Class, Week by Week" card holds a live log (newest first, one `<li>` per entry, marked by a `LIVE LOG` comment); a request like "add X to this week" means add an entry there and push; each week one thing, tagged `week-NN` with a self-report message; Week 14 is the final review.
-  The per-week Part II pages (incl. `coding-101.html`, Reading a Script) were deleted Nov 2026.
-
-## Nav
-Three sections — Lectures, Weeks (01–07 one page each, then one `08–14` entry), Reference — identical in all pages and inline in each, as
-everywhere on this site. `ARCH_NAV` in `arch51580_reuse_lectures.py` is the copy the script injects;
-after a nav edit, re-run the script for the four copies and sed the hand-authored pages
-(`index.html` and every `workshops/*.html`).
+## Repo rules
+- Push straight to `main`; the repo has a sole owner.
+- Every internal path starts with `/agentic-design-workflows/`, the Pages subpath.
+- The repo is self-contained: CSS, JS, deck system and images are copied in. Links to
+  `https://zihaozhang.cc/talks/...` are external references.
+- Head and side-panel nav are inline in every page, so a nav edit goes to all pages in one pass.
+  The nav has three sections: Lectures, Weeks (01–07, then one `08–14` entry), Reference.
+- Run find-and-replace across HTML with sed in Bash; PowerShell double-encodes UTF-8.
+- Colors and fonts are variables in `assets/css/tokens.css`; pages write `var(--…)`.
+- Images: AVIF, long edge ≤1920, `width`/`height` on every `<img>`, `loading="lazy"` below the fold,
+  in `assets/img/<lecture-slug>/`.
+- Dates live in `index.html` only. Weeks are the one label scheme: chip `WEEK NN`, nav number,
+  git tag `week-NN`.
+- Lectures are standalone and topic-named (`lectures/<slug>.html`), free of week numbers; refer to
+  another lecture by its title. Deck ids are `a51-NN`, since deck.js keys notes and Presenter View
+  off the id.
 
 ## Syllabus (`index.html`)
-Same `syllabus-section` / `schedule-table` / `grade-breakdown` classes as laar61400's, so
-`../_tools/docx/syllabus_to_docx.py` can be pointed at it when a school-submission PDF is
-needed (it is not wired up for this course yet — `COURSE` in that script is laar61400).
-
-- The **Weekly Schedule is two tables**, Part I (Weeks 1–7) and Part II (Weeks 8–14), with a
-  `.syllabus-body` label between them.
-- `_course/proposal.md` in the factory is the **frozen record of what was submitted** (Sep 2026).
-  This page is the source of truth for the schedule going forward; the two have diverged on purpose
-  and are not to be hand-synced. The divergence (Nov 2026 rework): Week 2 is Folders and Claude (now titled Context through Folders) with the site live, Week 7 is the midterm transition (site audited, Part II project page with the proposal; the audit workshop),
-  the workflow audit moved to Week 8 (a new workflow repository), milestones D1–D10 became one tag per week (`week-NN`, every week graded), BUILDSPEC milestones became tasks folders, and Reading a Script moved to Week 9 (later deleted; Part II is now one page). Earlier: Coding 101 was added as Week 2, pushing web coding
-  to Week 3 (where Graphic Design 101 joins it) and context to Week 4. Every proposed milestone D1–D6
-  kept its proposed week. The Guest Lectures section was removed Nov 2026 (not confirmed).
-- **Boilerplate re-synced to laar61400 verbatim (Nov 2026)**, incl. its Public Safety block and site footer,
-  which this copy had lost. Only the grade-breakdown weights and the two substitutions below differ.
-- **All policy prose is laar61400's, verbatim** — attendance, academic integrity, incompletes,
-  civility, electronic devices, grading criteria, the grade scale and its footnote, support
-  resources, Support of Program Mission, and the Agentic AI — Course Stance block. Do not write new
-  policy language for this course: copy it from `../laar61400/index.html`, which is the source.
-  Two factual substitutions only, both marked in the git history:
-  - Attendance's first sentence, because the Spring 2027 meeting day, time and room are not set.
-  - Support of Program Mission's first sentence, because this is an elective in Topics in
-    Computational Studies open across the school's programs, not part of the LA course sequence.
-    Every mission sentence after it is laar61400's, word for word.
-- The grade scale is laar61400's graduate scale and carries no D grades, while this course is open
-  to 4th/5th-year BArch students. Flagged, deliberately left as laar61400 has it.
-- **Coding-agent subscription is a department requirement**, stated flatly in Course Logistics: an
-  active paid plan for the semester, no hardship carve-out.
+- All policy prose is LAAR 61400's, verbatim, copied from `zihao-site/teaching/laar61400/index.html`.
+  Two sentences differ for fact: Attendance's first (meeting pattern) and Support of Program
+  Mission's first (an elective open across programs).
+- The Weekly Schedule is two tables, Part I and Part II. Every week is a graded milestone: the
+  commit tagged `week-NN` is the submission; Weeks 7 and 14 are graded on criteria, the rest
+  complete / incomplete.
+- `_prep/proposal.md` is the frozen record of the Sep 2026 submission; this page is the schedule's
+  source of truth.

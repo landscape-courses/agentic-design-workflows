@@ -1,14 +1,17 @@
-# Week 05 agenda: Managing Agents
+# Week 05: Managing Agents
 
-**Goal.** Fill out `workshops/design-and-build.html`, now a stub, as the Week 05 agenda: each part of the class
-under a `LECTURE`, `WORKSHOP` or `DISCUSSION` divider (rules in `CLAUDE.md`, "Workshop page rules").
+**Page:** `workshops/design-and-build.html`, a stub until this week is built.
 
-## From the syllabus (`index.html`, Week 05 row)
+## Open
+
+## Decided
+
+### From the syllabus (`index.html`, Week 05 row)
 - Topic: A main session that leads and reviews design, Sonnet agents it spawns to write the code; side chats sent back to main; forking to compare two directions; when to use which, and when to reach for a tasks folder instead; images for the web; desk crits
 - Due: two project pages, tagged `week-05`.
 - No lecture this week.
 
-## Management skill (first part of the class)
+### Management skill (first part of the class)
 A good project manager is good with agents. Before handing work to any agent, write the brief:
 - **Goal.** What done looks like, concretely enough to check.
 - **Scope.** What is in, what is out, which files it may touch.
@@ -19,12 +22,12 @@ Students write one brief per project page; the main session hands each to a Sonn
 afterwards asks two questions: did the agent miss, or did the brief?
 Learning objective that transfers: the quality of delegated work is set by the brief.
 
-## Model and effort per role
+### Model and effort per role
 Budget is part of the brief. The lead session runs Opus because it plans and reviews; the builders run
 Sonnet because they write code from a clear brief. Lower effort for mechanical work. Recap the Week 1
 token rules: never empty the weekly limit; plan around the five-hour window.
 
-## Ways of working with agents (second part)
+### Ways of working with agents (second part)
 Students meet multiple agents here, in the first half, on pages they already know. The week teaches
 the ways to work with agents, each named for when to reach for it.
 
@@ -46,11 +49,8 @@ the ways to work with agents, each named for when to reach for it.
 - Learning objectives that transfer: separate who decides from who builds; review against a written
   standard; keep each conversation on one thing.
 
-## To write
+## To build
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-05`.
-
-## Done when
-- No "To come" part left; the assignment sentence matches the syllabus Week 05 milestone.
-- Move this file to `tasks/done/`.
+- Done when the page has no "To come" part and its assignment sentence matches the syllabus milestone.
