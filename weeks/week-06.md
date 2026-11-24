@@ -31,6 +31,7 @@
 - Learning objective that transfers: work happens on a copy, and someone reads the difference before it goes live.
 
 ## To build
+- Make a skill from a finished chat ("turn what we just did into a skill"), and put each fix back into it.
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-06`.

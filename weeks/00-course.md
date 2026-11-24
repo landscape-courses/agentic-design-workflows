@@ -9,16 +9,6 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   students may enroll. Kept as LAAR 61400 has it; raise with the department if it matters.
 - The course has no card on `zihao-site/teaching/index.html`; add one when it is confirmed in the catalog.
 
-- 2026-11-24: Prompting video (youtube.com/watch?v=Jz4QT0vH-MU): talk to Claude like a co-worker; a goal
-  becomes a brief (what and why, quality bar, tools, freedom to replan, a pass/fail check, where it
-  goes); a second session reviews; CLAUDE.md as a short map; skills from a finished job; effort and
-  /clear. Proposed: a "How to brief Claude" section in Week 1, with its later moves cited in Weeks 3–6.
-
-- 2026-11-24: A Claude Code 101 page of plain facts, for example: every message resends the whole
-  conversation, so long sessions burn tokens fast and /clear or a fresh session resets it; auto is the
-  default permission mode and students keep it. Placement and
-  the fact list are open.
-
 ## Decided
 - Part I, one way of working with an agent per week: First Session · Context through Folders ·
   Checking the Agent's Work · Standards the Agent Follows · Managing Agents · Skills · Aligning with Claude.
@@ -30,7 +20,20 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
 - Week 1 to 2 and Week 7 pages are built; Weeks 3 to 6 are stubs with their content in `week-03.md`
   to `week-06.md`.
 
+- Claude Code 101 is a Reference page in the nav, a list of plain facts about Claude Code that
+  grows through the semester. It opens with: every message resends the whole conversation, so long
+  sessions burn tokens fast and /clear or a fresh session resets it; auto is the default permission
+  mode and students keep it.
+- The ideas of the prompting video (youtube.com/watch?v=Jz4QT0vH-MU) go into the weeks they belong to,
+  with the video as a reference link and no section of its own.
+
 ## To build
+- Claude Code 101 page in `reference/`, added to the Reference section of every page's nav.
+- Week 1: a goal becomes a brief (what and why, the quality bar with examples, tools, freedom to
+  replan, the check, where it goes); asking Claude to interview you and show a plan first.
+- Week 2: memory. Claude writes its own notes as you correct it (auto-memory, on by default); students
+  open them, read them, and delete or move into CLAUDE.md what belongs there. CLAUDE.md stays a short
+  map pointing to small files, each fact in one place.
 - Weeks 3 to 6 pages, each from its week file.
 - A school-submission PDF of the syllabus, when asked for: `_tools/docx/syllabus_to_docx.py` in the
   local `landscape-courses` folder is set up for LAAR 61400 and needs this course's `COURSE` block.

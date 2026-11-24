@@ -13,6 +13,8 @@
 - Lecture: `lectures/graphic-design-101.html` (Graphic Design 101)
 
 ## To build
+- A check Claude can run that comes back pass or fail, with evidence per line; a second session,
+  which never saw the first one's reasoning, reviews the work.
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-03`.

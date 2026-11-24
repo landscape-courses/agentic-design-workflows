@@ -50,6 +50,7 @@ the ways to work with agents, each named for when to reach for it.
   standard; keep each conversation on one thing.
 
 ## To build
+- Effort levels by how closely you watch: build on low, verify on high; /clear between tasks.
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-05`.
