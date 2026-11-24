@@ -56,6 +56,7 @@
     <div class="panel-section">
       <span class="panel-section-label">Reference</span>
       <a class="panel-link" href="/agentic-design-workflows/reference/claude-code-101.html">Claude Code 101</a>
+      <a class="panel-link" href="/agentic-design-workflows/reference/glossary.html">Glossary</a>
       <a class="panel-link" href="https://zihaozhang.cc/talks/agents-in-practice/" target="_blank" rel="noopener">Agents in Practice &#8599;</a>
       <a class="panel-link" href="https://www.anthropic.com/learn" target="_blank" rel="noopener">Anthropic Academy &#8599;</a>
     </div>
@@ -90,7 +91,7 @@
     <ul>
       <li>An agent does the work; your job is to say what done looks like</li>
       <li>Tokens are a budget: fresh sessions and the right model stretch it</li>
-      <li>Saved, pushed, tagged: knowing which version the world sees</li>
+      <li>How Git and GitHub work: saved on your machine, pushed online, tagged to hand in</li>
     </ul>
   </div>
 
@@ -111,7 +112,14 @@
 
   <!-- Intro -->
   <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
-    <div class="wf-step-desc">Everything you make in this course lives in one Git repository on GitHub: your site, your specs, your Part II project. Git keeps every saved version. GitHub holds a copy online, publishes the site, and is where your work is handed in.</div>
+    <div class="wf-step-desc">Everything you make in this course lives in one Git repository on GitHub: your site, your specs, your Part II project. Four words carry the whole system:</div>
+    <ul class="wf-tips">
+      <li><strong>Repository</strong> (repo): a project folder whose whole history is kept. Yours is the folder you make in step 02.</li>
+      <li><strong>Git</strong>: the program on your computer that keeps that history. Each saved version is a <strong>commit</strong>, with a message saying what changed.</li>
+      <li><strong>GitHub</strong>: a website that holds a copy of the repository online. Sending your commits there is a <strong>push</strong>. GitHub also publishes your site and is where work is handed in.</li>
+      <li><strong>Tag</strong>: a name pinned to one commit, such as <code>week-01</code>. The tagged commit is your submission.</li>
+    </ul>
+    <div class="wf-step-desc">So a change exists in three states: made on your machine, committed by Git, pushed to GitHub. Only a pushed change is online. Every other term is on the <a href="/agentic-design-workflows/reference/glossary.html">Glossary</a>.</div>
     <div class="wf-step-desc">You open a terminal once, to sign in to GitHub. After that you work in the Claude desktop app, and Claude runs Git for you. Your job is to say what you want and check what comes back.</div>
   </div>
 

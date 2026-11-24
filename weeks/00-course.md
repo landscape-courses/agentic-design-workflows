@@ -23,6 +23,9 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   grows through the semester. It opens with: every message resends the whole conversation, so long
   sessions burn tokens fast and /clear or a fresh session resets it; auto is the default permission
   mode and students keep it.
+- A Glossary is a Reference page beside Claude Code 101: each term the course uses, one line, grouped
+  Git, Web and Agent, added to as weeks introduce terms. Claude Code 101 holds behavior; the
+  Glossary holds meanings. Week 1 defines repository, Git, commit, push and tag and links to it.
 - The ideas of the prompting video (youtube.com/watch?v=Jz4QT0vH-MU) go into the weeks they belong to,
   with the video as a reference link and no section of its own.
 
