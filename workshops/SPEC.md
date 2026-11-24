@@ -9,7 +9,7 @@ Read this before building or editing a page in `workshops/`. These pages are the
   chip, `.wf-spec-item.wf-spec-outcome`, the week's outcome in one short phrase (colors `--done*`
   in `tokens.css`). A Due chip is the one date a page may repeat; add it once the calendar is set.
 - `.wf-objectives` sits between the spec strip and the assignment: a `<p>` "In this session you will
-  learn:" and two to four `<li>` bullets, each naming what is learned (a concept, a tool, a way to
+  learn:" and two or three `<li>` bullets, each naming what is learned (a concept, a tool, a way to
   use or manage something) in a few words. The first is the week's main concept.
 - `.wf-outcome`: one `<strong>Assignment</strong>` label and one product-framed sentence with the
   format folded in. Scope its CSS as `.wf-outcome > strong`.
