@@ -20,7 +20,6 @@ A good project manager is good with agents. Before handing work to any agent, wr
 - **Decision rights.** When to stop and ask you; what it may decide alone.
 Students write one brief per project page; the main session hands each to a Sonnet agent. Review
 afterwards asks two questions: did the agent miss, or did the brief?
-Learning objective that transfers: the quality of delegated work is set by the brief.
 
 ### Model and effort per role
 Budget is part of the brief. The lead session runs Opus because it plans and reviews; the builders run
@@ -46,8 +45,12 @@ the ways to work with agents, each named for when to reach for it.
 
 - Desktop app only: confirm each move (spawning Sonnet agents, side chat, send to main, fork) exists in
   the Code tab before writing the step. Students do not use the terminal.
-- Learning objectives that transfer: separate who decides from who builds; review against a written
-  standard; keep each conversation on one thing.
+
+### Learning objectives
+From the student's side, the lead concept first; the page lists them as written.
+- The quality of delegated work is set by the brief
+- Separate who decides from who builds, and review against a written standard
+- Keep each conversation on one thing
 
 ## To build
 - Effort levels by how closely you watch: build on low, verify on high; /clear between tasks.

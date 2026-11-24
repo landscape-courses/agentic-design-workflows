@@ -12,6 +12,12 @@
 - Lecture: `lectures/web-coding-literacy.html` (Web Coding Literacy)
 - Lecture: `lectures/graphic-design-101.html` (Graphic Design 101)
 
+### Learning objectives
+From the student's side, the lead concept first; the page lists them as written.
+- Trust the result you checked, not the agent's report of it
+- Enough HTML and CSS to read what changed
+- Type, grid and color named precisely enough to check
+
 ## To build
 - A check Claude can run that comes back pass or fail, with evidence per line; a second session,
   which never saw the first one's reasoning, reviews the work.

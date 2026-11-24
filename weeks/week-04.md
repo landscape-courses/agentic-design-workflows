@@ -11,6 +11,12 @@
 - Due: site design system written into the folder + CLAUDE.md audited, tagged `week-04`.
 - Lecture: `lectures/cybernetics-and-design.html` (Cybernetics and Design)
 
+### Learning objectives
+From the student's side, the lead concept first; the page lists them as written.
+- A standard the agent follows is a written rule, kept in one place
+- The agent loop: what it reads, what it can touch, how it corrects itself
+- Auditing CLAUDE.md so it says what you mean now
+
 ## To build
 - Replace the "To come" part with the week's parts, in class order.
 - Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.

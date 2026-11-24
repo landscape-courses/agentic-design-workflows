@@ -28,7 +28,12 @@
    preview it, then merge. Merge when it works and you would be fine with it live; otherwise ask for fixes
    on the branch.
 - Desktop app and web only, no terminal. Confirm each step in the current Claude app and claude.ai/code UI.
-- Learning objective that transfers: work happens on a copy, and someone reads the difference before it goes live.
+
+### Learning objectives
+From the student's side, the lead concept first; the page lists them as written.
+- Work happens on a copy, and someone reads the difference before it goes live
+- An instruction given three times becomes a skill
+- Agents keep working while your laptop is closed
 
 ## To build
 - Make a skill from a finished chat ("turn what we just did into a skill"), and put each fix back into it.
