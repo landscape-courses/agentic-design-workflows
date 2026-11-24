@@ -9,6 +9,11 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   students may enroll. Kept as LAAR 61400 has it; raise with the department if it matters.
 - The course has no card on `zihao-site/teaching/index.html`; add one when it is confirmed in the catalog.
 
+- 2026-11-24: Prompting video (youtube.com/watch?v=Jz4QT0vH-MU): talk to Claude like a co-worker; a goal
+  becomes a brief (what and why, quality bar, tools, freedom to replan, a pass/fail check, where it
+  goes); a second session reviews; CLAUDE.md as a short map; skills from a finished job; effort and
+  /clear. Proposed: a "How to brief Claude" section in Week 1, with its later moves cited in Weeks 3–6.
+
 ## Decided
 - Part I, one way of working with an agent per week: First Session · Context through Folders ·
   Checking the Agent's Work · Standards the Agent Follows · Managing Agents · Skills · Aligning with Claude.
