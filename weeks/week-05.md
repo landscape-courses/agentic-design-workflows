@@ -47,15 +47,14 @@ the ways to work with agents, each named for when to reach for it.
   the Code tab before writing the step. Students do not use the terminal.
 
 ### Learning objectives
-The page lists these under "In this class you will learn:", the week's main concept first.
-- Why the quality of delegated work is set by the brief
-- How to write a brief: goal, scope, resources, and when to ask
-- How to manage agents: a main session that decides and reviews, Sonnet agents that build
-- Side chats, forks and the tasks folder, and when each one fits
+On the page now, under "In this session you will learn:".
+- Briefing agents
+- Delegating from a lead session to parallel agents
+- Side chats, forks and tasks
 
 ## To build
 - Effort levels by how closely you watch: build on low, verify on high; /clear between tasks.
 - Replace the "To come" part with the week's parts, in class order.
-- Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
+- Spec strip (Tool, Bring), Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-05`.
 - Done when the page has no "To come" part and its assignment sentence matches the syllabus milestone.

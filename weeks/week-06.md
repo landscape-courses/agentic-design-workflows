@@ -30,15 +30,14 @@
 - Desktop app and web only, no terminal. Confirm each step in the current Claude app and claude.ai/code UI.
 
 ### Learning objectives
-The page lists these under "In this class you will learn:", the week's main concept first.
-- Branches: work happens on a copy, and someone reads the difference before it goes live
-- Cloud sessions, started from your phone, that work while your laptop is closed
-- How a team ships with pull requests and review, and which steps a solo designer can skip
-- How to turn a repeated instruction into a skill
+On the page now, under "In this session you will learn:".
+- Branches and merging
+- Cloud sessions
+- Skills
 
 ## To build
 - Make a skill from a finished chat ("turn what we just did into a skill"), and put each fix back into it.
 - Replace the "To come" part with the week's parts, in class order.
-- Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
+- Spec strip (Tool, Bring), Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-06`.
 - Done when the page has no "To come" part and its assignment sentence matches the syllabus milestone.

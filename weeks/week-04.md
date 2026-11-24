@@ -12,14 +12,13 @@
 - Lecture: `lectures/cybernetics-and-design.html` (Cybernetics and Design)
 
 ### Learning objectives
-The page lists these under "In this class you will learn:", the week's main concept first.
-- CLAUDE.md as the project's standards manual, with each fact in one place
-- How to write a design system as rules Claude follows on every page
-- How to audit a context file
-- The agent loop, and what an agent can touch
+On the page now, under "In this session you will learn:".
+- The agent loop
+- A design system written as rules
+- Auditing CLAUDE.md
 
 ## To build
 - Replace the "To come" part with the week's parts, in class order.
-- Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
+- Spec strip (Tool, Bring), Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-04`.
 - Done when the page has no "To come" part and its assignment sentence matches the syllabus milestone.

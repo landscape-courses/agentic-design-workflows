@@ -13,16 +13,15 @@
 - Lecture: `lectures/graphic-design-101.html` (Graphic Design 101)
 
 ### Learning objectives
-The page lists these under "In this class you will learn:", the week's main concept first.
-- Why you, not the agent, decide when work is done, and how to check it in preview and on the live site
-- Enough HTML and CSS to see what a change did, and how to read a diff
-- How to describe type, grid and color precisely enough for Claude to apply
-- How a pass/fail check and a second session work as reviewers
+On the page now, under "In this session you will learn:".
+- Reviewing the agent's work: local preview, diffs, pass/fail checks
+- Reading HTML and CSS
+- Type, grid and color for the web
 
 ## To build
 - A check Claude can run that comes back pass or fail, with evidence per line; a second session,
   which never saw the first one's reasoning, reviews the work.
 - Replace the "To come" part with the week's parts, in class order.
-- Spec strip (Tool, Bring), Learning Objectives, Ongoing and Feeds forward.
+- Spec strip (Tool, Bring), Ongoing and Feeds forward.
 - Steps with copy-ready prompts where students work with Claude; the last step tags `week-03`.
 - Done when the page has no "To come" part and its assignment sentence matches the syllabus milestone.
