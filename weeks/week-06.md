@@ -30,11 +30,11 @@
 - Desktop app and web only, no terminal. Confirm each step in the current Claude app and claude.ai/code UI.
 
 ### Learning objectives
-The page lists these under "In this class you will:", the week's main concept first.
-- Understand branches: work happens on a copy, and someone reads the difference before it goes live.
-- Learn to use cloud sessions, started from your phone, that work while your laptop is closed.
-- Understand how a team ships with pull requests and review, and which steps a solo designer can skip.
-- Learn to turn a repeated instruction into a skill.
+The page lists these under "In this class you will learn:", the week's main concept first.
+- Branches: work happens on a copy, and someone reads the difference before it goes live
+- Cloud sessions, started from your phone, that work while your laptop is closed
+- How a team ships with pull requests and review, and which steps a solo designer can skip
+- How to turn a repeated instruction into a skill
 
 ## To build
 - Make a skill from a finished chat ("turn what we just did into a skill"), and put each fix back into it.

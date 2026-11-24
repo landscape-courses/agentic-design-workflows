@@ -12,11 +12,11 @@
 - Lecture: `lectures/cybernetics-and-design.html` (Cybernetics and Design)
 
 ### Learning objectives
-The page lists these under "In this class you will:", the week's main concept first.
-- Understand CLAUDE.md as the project's standards manual, with each fact in one place.
-- Learn to write a design system as rules Claude follows on every page.
-- Learn to audit a context file.
-- Understand the agent loop and what an agent can touch.
+The page lists these under "In this class you will learn:", the week's main concept first.
+- CLAUDE.md as the project's standards manual, with each fact in one place
+- How to write a design system as rules Claude follows on every page
+- How to audit a context file
+- The agent loop, and what an agent can touch
 
 ## To build
 - Replace the "To come" part with the week's parts, in class order.

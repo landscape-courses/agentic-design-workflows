@@ -13,11 +13,11 @@
 - Lecture: `lectures/graphic-design-101.html` (Graphic Design 101)
 
 ### Learning objectives
-The page lists these under "In this class you will:", the week's main concept first.
-- Understand that you, not the agent, decide when work is done, and check it in preview and on the live site.
-- Learn to read HTML and CSS well enough to see what a change did, and to read a diff.
-- Learn to describe type, grid and color precisely enough for Claude to apply.
-- Learn to use a pass/fail check and a second session as reviewers.
+The page lists these under "In this class you will learn:", the week's main concept first.
+- Why you, not the agent, decide when work is done, and how to check it in preview and on the live site
+- Enough HTML and CSS to see what a change did, and how to read a diff
+- How to describe type, grid and color precisely enough for Claude to apply
+- How a pass/fail check and a second session work as reviewers
 
 ## To build
 - A check Claude can run that comes back pass or fail, with evidence per line; a second session,

@@ -47,11 +47,11 @@ the ways to work with agents, each named for when to reach for it.
   the Code tab before writing the step. Students do not use the terminal.
 
 ### Learning objectives
-The page lists these under "In this class you will:", the week's main concept first.
-- Understand that the quality of delegated work is set by the brief.
-- Learn to write a brief: goal, scope, resources, and when to ask.
-- Learn to manage agents: a main session that decides and reviews, Sonnet agents that build.
-- Learn to use side chats, forks and the tasks folder, and when each one fits.
+The page lists these under "In this class you will learn:", the week's main concept first.
+- Why the quality of delegated work is set by the brief
+- How to write a brief: goal, scope, resources, and when to ask
+- How to manage agents: a main session that decides and reviews, Sonnet agents that build
+- Side chats, forks and the tasks folder, and when each one fits
 
 ## To build
 - Effort levels by how closely you watch: build on low, verify on high; /clear between tasks.
