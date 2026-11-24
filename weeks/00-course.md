@@ -19,7 +19,6 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
 - A coding-agent subscription is a department requirement, stated flatly in Course Logistics.
 - Week 1 to 2 and Week 7 pages are built; Weeks 3 to 6 are stubs with their content in `week-03.md`
   to `week-06.md`.
-
 - Claude Code 101 is a Reference page in the nav, a list of plain facts about Claude Code that
   grows through the semester. It opens with: every message resends the whole conversation, so long
   sessions burn tokens fast and /clear or a fresh session resets it; auto is the default permission
