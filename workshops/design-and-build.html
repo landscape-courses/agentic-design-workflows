@@ -20,6 +20,11 @@
       padding:7px 11px;transition:.15s;}
     .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
     .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
   </style>
 </head>
 <body>
@@ -62,20 +67,21 @@
     <div class="page-inner">
 <div class="wf-wrap wf-doc">
 
-
   <!-- Header -->
   <div class="wf-header">
     <div class="wf-index">WEEK 05</div>
     <div class="wf-header-text">
       <div class="wf-title">Managing Agents</div>
-      <div class="wf-subtitle">Goal, scope, resources and when to ask: the brief a good manager writes; then a lead session and the Sonnet agents it spawns</div>
+      <div class="wf-subtitle">The brief &middot; a lead session and its builders &middot; side chats and forks</div>
     </div>
   </div>
 
   <!-- Spec strip -->
   <div class="wf-spec">
-    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One class</span></div>
-    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Tagged <code>week-05</code></span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; Opus and Sonnet</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Images and a short text for two projects</span></div>
+    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Two project pages, tagged <code>week-05</code></span></div>
   </div>
 
   <!-- Learning objectives -->
@@ -91,20 +97,204 @@
 
   <!-- Assignment -->
   <div class="wf-outcome">
-    <strong>Assignment</strong><span>Two project pages, built from tasks, tagged <code>week-05</code>.</span>
+    <strong>Assignment</strong><span>Two project pages, built by Sonnet agents and reviewed by the main session, tagged <code>week-05</code>.</span>
   </div>
 
-  <!-- Agenda -->
+  <!-- Pipeline strip -->
+  <div class="wf-pipeline">
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Briefs</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Lead</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Builders</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Review</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Fixes</div></div>
+  </div>
+
+  <!-- Intro -->
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">A good project manager is good with agents. You decide what gets built and whether it is good; agents do the building. The work comes back as good as the brief you wrote.</div>
+  </div>
+
+  <!-- Steps -->
   <div class="wf-steps">
 
-    <div class="wf-session"><span class="wf-session-num">AGENDA</span><span class="wf-session-label">To come</span><span class="wf-session-rule"></span></div>
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">The Brief</span><span class="wf-session-rule"></span></div>
 
-    <div class="wf-step wf-full wf-nocheck">
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">01</span>
+        <span class="wf-step-label">Bring Two Projects</span>
+      </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">The rest of this week&rsquo;s agenda is being written.</div>
+        <div class="wf-step-desc">Put the material for two projects in <code>_source</code>, one folder each, named for the project:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">folder</span>
+          <pre>_source/
+├─ river-park/
+│  ├─ plan.jpg
+│  └─ text.md
+└─ courtyard-study/
+   ├─ model-01.jpg
+   └─ text.md</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>A few images and a short paragraph per project is enough.</li>
+        </ul>
       </div>
     </div>
 
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">02</span>
+        <span class="wf-step-label">Write Two Briefs</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Before handing work to any agent, write the brief. Four parts:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">brief template</span>
+          <pre>Goal: a project page for &lt;project&gt;. Done means &lt;what I will check&gt;.
+Scope: one new file, projects/&lt;name&gt;.html, and a link to it from
+index.html. Touch nothing else.
+Resources: CLAUDE.md, design-system.md, _source/&lt;name&gt;/, and
+&lt;a page I admire&gt;.
+When to ask: stop and ask me before adding a color, font or layout
+that is not in the design system. Crop images on your own.</pre>
+        </div>
+        <div class="wf-step-desc">Then paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Write tasks/03-&lt;first project&gt;.md and tasks/04-&lt;second project&gt;.md
+from this brief template. Ask me one question at a time for anything
+missing.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>The goal says what done looks like, concretely enough to check. The scope says which files the agent may touch.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">A Lead and Its Builders</span><span class="wf-session-rule"></span></div>
+
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Four ways to work with agents, each for its own situation:</div>
+        <ul class="wf-tips">
+          <li><strong>Lead and builders.</strong> The work splits into parts and the judgment should stay in one place.</li>
+          <li><strong>Side chat.</strong> A side question would clutter the main thread.</li>
+          <li><strong>Fork.</strong> Two directions are plausible and you would otherwise argue with yourself.</li>
+          <li><strong>Tasks folder, fresh session.</strong> The work spans days. You met this in Week 2.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Spawn the Builders</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Set the session&rsquo;s model to Opus in the model menu. The lead plans and reviews; the builders write code. Paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>You are the lead on this site and you do not write page code. Spawn
+two subagents on Sonnet at low effort, one per brief:
+tasks/03-&lt;first project&gt;.md and tasks/04-&lt;second project&gt;.md. Run
+them in parallel. When they report back, review both pages against
+design-system.md, color first, then type, then layout, and list what
+fails.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>Build on low effort, check on high. Effort is part of the budget, like the model.</li>
+          <li>Every agent counts against your usage. Keep an eye on the five-hour window.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">Side Chat for a Side Question</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">How big should the images be? That question would fill the lead&rsquo;s context with detail. Open a second session in the same folder and ask it there:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>What format and size should images on a portfolio site be? Give me
+one rule I can follow, in one line.</pre>
+        </div>
+        <div class="wf-step-desc">When the answer matters, bring the rule back to the lead:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Use this image rule for both pages: &lt;the rule&gt;.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>This course site&rsquo;s own rule: AVIF, long edge 1920px at most, width and height on every image.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">05</span>
+        <span class="wf-step-label">Review and Send Fixes</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Send each builder the fixes for its page, then review both again.</pre>
+        </div>
+        <div class="ws-predict">
+          <strong>When a page misses</strong>
+          <span>Ask: did the agent miss, or did the brief? If the brief never said it, fix the brief and run it again.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">06</span>
+        <span class="wf-step-label">Fork to Compare</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Unsure between two directions for one page, say one full-width image or a grid of three? Try both:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Fork this session. In the fork, try &lt;the second direction&gt; on the
+&lt;project&gt; page.</pre>
+        </div>
+        <div class="wf-step-desc">Compare the two previews, keep one, and close the other session.</div>
+        <ul class="wf-tips">
+          <li>Starting a new task? Type <code>/clear</code> or open a fresh session. A long conversation costs more with every message.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-session"><span class="wf-session-num">DISCUSSION</span><span class="wf-session-label">Desk Crits</span><span class="wf-session-rule"></span></div>
+
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Show your two pages. Name one thing the brief got right and one thing it missed.</div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">07</span>
+        <span class="wf-step-label">Hand It In</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Move both tasks to tasks/done/, commit and push. Tag the latest commit week-05 and push the tag.</pre>
+        </div>
+        <div class="wf-step-desc">Give the link to the instructor. It will be opened in class.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Feeds forward -->
+  <div class="wf-ongoing">
+    <strong>Feeds forward</strong><span>Every job you hand off in Part II starts as a brief like these. When work comes back wrong, check the brief first.</span>
   </div>
 
 </div>

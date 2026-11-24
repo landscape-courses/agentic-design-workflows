@@ -20,6 +20,11 @@
       padding:7px 11px;transition:.15s;}
     .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
     .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
   </style>
 </head>
 <body>
@@ -62,20 +67,21 @@
     <div class="page-inner">
 <div class="wf-wrap wf-doc">
 
-
   <!-- Header -->
   <div class="wf-header">
     <div class="wf-index">WEEK 04</div>
     <div class="wf-header-text">
       <div class="wf-title">Standards the Agent Follows</div>
-      <div class="wf-subtitle">The agent loop and what an agent can touch; CLAUDE.md as the project&rsquo;s standards manual; single source of truth; auditing a context file; writing a design system the agent follows</div>
+      <div class="wf-subtitle">The agent loop &middot; a design system Claude follows &middot; CLAUDE.md audited</div>
     </div>
   </div>
 
   <!-- Spec strip -->
   <div class="wf-spec">
-    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One class</span></div>
-    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Tagged <code>week-04</code></span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; Markdown</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your site with Week 3&rsquo;s type, grid and color</span></div>
+    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Design system written, tagged <code>week-04</code></span></div>
   </div>
 
   <!-- Learning objectives -->
@@ -91,28 +97,134 @@
 
   <!-- Assignment -->
   <div class="wf-outcome">
-    <strong>Assignment</strong><span>Site design system written into the folder + CLAUDE.md audited, tagged <code>week-04</code>.</span>
+    <strong>Assignment</strong><span>Your site&rsquo;s design system written into the folder and CLAUDE.md audited, tagged <code>week-04</code>.</span>
   </div>
 
-  <!-- Agenda -->
+  <!-- Pipeline strip -->
+  <div class="wf-pipeline">
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Spec</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">design-system.md</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">CLAUDE.md</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Audit</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">New session</div></div>
+  </div>
+
+  <!-- Intro -->
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">An agent reads, acts, checks the result and goes again. What it reads at the start decides what it does. Today you write the standards your site follows and clean CLAUDE.md so the two never disagree.</div>
+  </div>
+
+  <!-- Steps -->
   <div class="wf-steps">
 
     <div class="wf-session"><span class="wf-session-num">LECTURE</span><span class="wf-session-label">Cybernetics and Design</span><span class="wf-session-rule"></span></div>
 
     <div class="wf-step wf-full wf-nocheck">
       <div class="wf-step-body">
-        <div class="wf-step-desc"><a href="/agentic-design-workflows/lectures/cybernetics-and-design.html">Open the deck &rarr;</a></div>
+        <div class="wf-step-desc">The agent loop, what an agent can touch, MCP, and context through folder structure. <a href="/agentic-design-workflows/lectures/cybernetics-and-design.html">Open the deck &rarr;</a></div>
       </div>
     </div>
 
-    <div class="wf-session"><span class="wf-session-num">AGENDA</span><span class="wf-session-label">To come</span><span class="wf-session-rule"></span></div>
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">Standards the Agent Follows</span><span class="wf-session-rule"></span></div>
 
-    <div class="wf-step wf-full wf-nocheck">
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">01</span>
+        <span class="wf-step-label">Write the Design System</span>
+      </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">The rest of this week&rsquo;s agenda is being written.</div>
+        <div class="wf-step-desc">Last week&rsquo;s values sit in a finished task. A rule every page follows belongs where every session reads it. Paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Read my site's CSS and tasks/done/02-type-grid-color.md. Write
+design-system.md at the root of this folder: every color, font, size
+and grid value named once as a CSS variable, each with one line on
+when to use it. Show it to me. Then make the site's CSS use those
+variables instead of raw values.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>A rule says when: &ldquo;accent: links, and one highlight per page&rdquo;, not only a hex value.</li>
+        </ul>
       </div>
     </div>
 
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">02</span>
+        <span class="wf-step-label">Point CLAUDE.md to It</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>In CLAUDE.md, replace any type, grid or color values with one line:
+every page follows design-system.md. The values live only there.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>One home for each fact. Change the accent color in one file and every page follows; two copies would one day disagree.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Audit CLAUDE.md</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Four weeks of sessions have each added a line. Paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Audit CLAUDE.md. List every line that is stated twice, out of date,
+something you could learn by reading the files, or phrased as what
+not to do. For each, propose a cut or a rewrite. Apply nothing until
+I approve.</pre>
+        </div>
+        <div class="ws-predict">
+          <strong>Before you approve a cut</strong>
+          <span>Would a new session still do this right without the line?</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">Test with a Fresh Session</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Start a new session in the same folder and paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Add a footer to every page with my name, the year and a link to my
+GitHub. Then tell me which rules you followed and where they are
+written.</pre>
+        </div>
+        <div class="ws-predict">
+          <strong>What to look for</strong>
+          <span>The answer names design-system.md. If the footer uses a color or size that is not in the system, the gap is in the files: fix the file, then ask again.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">05</span>
+        <span class="wf-step-label">Hand It In</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Commit and push. Tag the latest commit week-04 and push the tag.</pre>
+        </div>
+        <div class="wf-step-desc">Give the link to the instructor. It will be opened in class.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Feeds forward -->
+  <div class="wf-ongoing">
+    <strong>Feeds forward</strong><span>Next week, agents you brief build new pages against this system, and the lead session reviews them against it.</span>
   </div>
 
 </div>

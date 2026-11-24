@@ -20,6 +20,11 @@
       padding:7px 11px;transition:.15s;}
     .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
     .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
   </style>
 </head>
 <body>
@@ -62,20 +67,21 @@
     <div class="page-inner">
 <div class="wf-wrap wf-doc">
 
-
   <!-- Header -->
   <div class="wf-header">
     <div class="wf-index">WEEK 06</div>
     <div class="wf-header-text">
       <div class="wf-title">Skills and Cloud Sessions</div>
-      <div class="wf-subtitle">Turn a repeated instruction into a skill; run it in a cloud session on a branch; compare, then merge</div>
+      <div class="wf-subtitle">A skill from a finished chat &middot; a cloud session from your phone &middot; branch, compare, merge</div>
     </div>
   </div>
 
   <!-- Spec strip -->
   <div class="wf-spec">
-    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One class</span></div>
-    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Tagged <code>week-06</code></span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; Claude mobile app &middot; GitHub</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your phone, signed in to the Claude app</span></div>
+    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">One task merged from a branch, tagged <code>week-06</code></span></div>
   </div>
 
   <!-- Learning objectives -->
@@ -94,17 +100,159 @@
     <strong>Assignment</strong><span>One task done in a cloud session started from your phone, on a branch, compared with main and merged, tagged <code>week-06</code>.</span>
   </div>
 
-  <!-- Agenda -->
+  <!-- Pipeline strip -->
+  <div class="wf-pipeline">
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Skill</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Task</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Cloud session</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Branch</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Compare</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Merge</div></div>
+  </div>
+
+  <!-- Intro -->
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">Two ways to do less by hand. A skill holds an instruction you keep giving. A cloud session works on a copy while you are away, and you read the difference before it goes live.</div>
+  </div>
+
+  <!-- Steps -->
   <div class="wf-steps">
 
-    <div class="wf-session"><span class="wf-session-num">AGENDA</span><span class="wf-session-label">To come</span><span class="wf-session-rule"></span></div>
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">Skills</span><span class="wf-session-rule"></span></div>
 
-    <div class="wf-step wf-full wf-nocheck">
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">01</span>
+        <span class="wf-step-label">Make a Skill from a Finished Chat</span>
+      </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">The rest of this week&rsquo;s agenda is being written.</div>
+        <div class="wf-step-desc">Said it three times? Make it a skill. Last week you gave Claude the image rule more than once. Paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Turn how we handle images on this site into a skill called
+web-images: the format, the size, where files go, and width and
+height on every image. Save it in this project.</pre>
+        </div>
+        <div class="wf-step-desc">Test it on a new image:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Add _source/&lt;an image&gt;.jpg to the &lt;project&gt; page.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>Type <code>/</code> to see your skills.</li>
+          <li>When it misses, say: <em>&ldquo;Fix the web-images skill so this does not happen again.&rdquo;</em> The fix goes into the skill, where it lasts.</li>
+          <li>A skill is optional for the assignment. Make one when you notice you repeat yourself.</li>
+        </ul>
       </div>
     </div>
 
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">Branches and How a Team Ships</span><span class="wf-session-rule"></span></div>
+
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <ul class="wf-tips">
+          <li><strong>main is what is live.</strong> Every push to it updates your site.</li>
+          <li><strong>A branch is a copy</strong> you can change without touching main.</li>
+          <li><strong>A team ships</strong> in five steps: a branch, a pull request, review and approval by someone else, automatic checks, then a merge into main. Each step exists because many people touch the same code.</li>
+          <li><strong>Working alone</strong>, you keep three: work on a branch, read the diff, merge. You are the reviewer. A tiny fix can go straight to main.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">Cloud Sessions</span><span class="wf-session-rule"></span></div>
+
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <div class="wf-step-desc">A cloud session runs on GitHub&rsquo;s copy of your repository, on its own branch, and keeps working with your laptop closed. Several can run at once. The instructor shows one running on this course site. Remote control is the contrast: your own laptop, driven from your phone.</div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">02</span>
+        <span class="wf-step-label">Write the Task</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">A cloud session sees only what is on GitHub, so the task has to be pushed. In Claude desktop:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Add tasks/05-&lt;name&gt;.md describing one small change: &lt;a third project
+page, or a fix from last week's crit&gt;. Commit and push it.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>Pick something you can check in one look.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Start It from Your Phone</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Open the Claude app on your phone, go to Code, choose your <code>username.github.io</code> repository, and send:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Do tasks/05-&lt;name&gt;.md on a new branch. Open a pull request when it is
+done.</pre>
+        </div>
+        <div class="wf-step-desc">Put the phone away. Check back in when it says it is done.</div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">Compare with main</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">On GitHub, open the pull request and its <strong>Files changed</strong> tab. Read the diff the way you did in Week 3. To see the change, ask Claude desktop:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Check out the branch from my latest pull request and open a preview.</pre>
+        </div>
+        <div class="ws-predict">
+          <strong>Merge or ask for fixes</strong>
+          <span>Merge when it works and you would be fine with it live. Otherwise ask the cloud session for fixes on the same branch.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">05</span>
+        <span class="wf-step-label">Merge</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">On the pull request, click <strong>Merge pull request</strong>, then confirm. Then in Claude desktop:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Switch to main and pull.</pre>
+        </div>
+        <div class="wf-step-desc">Open <code>https://username.github.io</code> and check the change is live.</div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">06</span>
+        <span class="wf-step-label">Hand It In</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Move the task to tasks/done/, commit and push. Tag the latest commit week-06 and push the tag.</pre>
+        </div>
+        <div class="wf-step-desc">Give the link to the instructor. It will be opened in class.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Feeds forward -->
+  <div class="wf-ongoing">
+    <strong>Feeds forward</strong><span>In Part II, cloud sessions keep your tool moving between classes, and skills hold the steps you repeat.</span>
   </div>
 
 </div>

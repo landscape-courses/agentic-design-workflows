@@ -17,8 +17,8 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   Week 8 opens with two live demos (an agent-written Grasshopper Python plugin, and MCP). Week 14
   is the graded final.
 - A coding-agent subscription is a department requirement, stated flatly in Course Logistics.
-- Week 1 to 2 and Week 7 pages are built; Weeks 3 to 6 are stubs with their content in `week-03.md`
-  to `week-06.md`.
+- All Part I week pages are built. Week 4 tests the design system with a footer; Week 6 starts its
+  cloud session in class, from the phone.
 - Claude Code 101 is a Reference page in the nav, a list of plain facts about Claude Code that
   grows through the semester. It opens with: every message resends the whole conversation, so long
   sessions burn tokens fast and /clear or a fresh session resets it; auto is the default permission
@@ -30,6 +30,5 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   with the video as a reference link and no section of its own.
 
 ## To build
-- Weeks 3 to 6 pages, each from its week file.
 - A school-submission PDF of the syllabus, when asked for: `_tools/docx/syllabus_to_docx.py` in the
   local `landscape-courses` folder is set up for LAAR 61400 and needs this course's `COURSE` block.

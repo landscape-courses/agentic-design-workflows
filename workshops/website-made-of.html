@@ -20,6 +20,11 @@
       padding:7px 11px;transition:.15s;}
     .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
     .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
   </style>
 </head>
 <body>
@@ -62,20 +67,21 @@
     <div class="page-inner">
 <div class="wf-wrap wf-doc">
 
-
   <!-- Header -->
   <div class="wf-header">
     <div class="wf-index">WEEK 03</div>
     <div class="wf-header-text">
-      <div class="wf-title">Checking the Agent's Work</div>
-      <div class="wf-subtitle">HTML, CSS and JavaScript as the literacy to read what the agent wrote; local preview and reading a diff; type, grid and color described precisely enough for the agent to apply, then checked</div>
+      <div class="wf-title">Checking the Agent&rsquo;s Work</div>
+      <div class="wf-subtitle">Read the page &middot; name type, grid and color &middot; read the diff &middot; a check that can fail</div>
     </div>
   </div>
 
   <!-- Spec strip -->
   <div class="wf-spec">
-    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One class</span></div>
-    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Tagged <code>week-03</code></span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Length</span><span class="wf-spec-value">One session, in class</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Tool</span><span class="wf-spec-value">Claude desktop &middot; a browser</span></div>
+    <div class="wf-spec-item"><span class="wf-spec-label">Bring</span><span class="wf-spec-value">Your site from Week 2, a site whose type you admire</span></div>
+    <div class="wf-spec-item wf-spec-outcome"><span class="wf-spec-label">Outcome</span><span class="wf-spec-value">Type, grid and color live, tagged <code>week-03</code></span></div>
   </div>
 
   <!-- Learning objectives -->
@@ -83,7 +89,7 @@
     <strong>Learning Objectives</strong>
     <p>In this session you will learn:</p>
     <ul>
-      <li>Reviewing the agent's work: local preview, diffs, pass/fail checks</li>
+      <li>Reviewing the agent&rsquo;s work: local preview, diffs, pass/fail checks</li>
       <li>Reading HTML and CSS</li>
       <li>Type, grid and color for the web</li>
     </ul>
@@ -91,17 +97,32 @@
 
   <!-- Assignment -->
   <div class="wf-outcome">
-    <strong>Assignment</strong><span>Type, grid and color applied by Claude and checked by you, tagged <code>week-03</code>.</span>
+    <strong>Assignment</strong><span>Type, grid and color applied by Claude and checked by you in preview and on the live site, tagged <code>week-03</code>.</span>
   </div>
 
-  <!-- Agenda -->
+  <!-- Pipeline strip -->
+  <div class="wf-pipeline">
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Spec</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node wf-pipe-tool">Apply</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Diff</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Check</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Review</div><div class="wf-pipe-arrow">&rarr;</div></div>
+    <div class="wf-pipe-step"><div class="wf-pipe-node">Live</div></div>
+  </div>
+
+  <!-- Intro -->
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">Claude says it is done when it has finished writing. The work is done when you have checked it. Today you learn to read what it wrote, to name what you want in values, and to ask for a check that can fail.</div>
+  </div>
+
+  <!-- Steps -->
   <div class="wf-steps">
 
     <div class="wf-session"><span class="wf-session-num">LECTURE</span><span class="wf-session-label">Web Coding Literacy</span><span class="wf-session-rule"></span></div>
 
     <div class="wf-step wf-full wf-nocheck">
       <div class="wf-step-body">
-        <div class="wf-step-desc"><a href="/agentic-design-workflows/lectures/web-coding-literacy.html">Open the deck &rarr;</a></div>
+        <div class="wf-step-desc">HTML is structure, CSS is style, JavaScript is behavior. Every element is a box; flexbox and grid arrange the boxes. <a href="/agentic-design-workflows/lectures/web-coding-literacy.html">Open the deck &rarr;</a></div>
       </div>
     </div>
 
@@ -109,18 +130,149 @@
 
     <div class="wf-step wf-full wf-nocheck">
       <div class="wf-step-body">
-        <div class="wf-step-desc"><a href="/agentic-design-workflows/lectures/graphic-design-101.html">Open the deck &rarr;</a></div>
+        <div class="wf-step-desc">Color, grid and type, and the pre-flight checklist you run before a page goes out. <a href="/agentic-design-workflows/lectures/graphic-design-101.html">Open the deck &rarr;</a></div>
       </div>
     </div>
 
-    <div class="wf-session"><span class="wf-session-num">AGENDA</span><span class="wf-session-label">To come</span><span class="wf-session-rule"></span></div>
+    <div class="wf-session"><span class="wf-session-num">WORKSHOP</span><span class="wf-session-label">Checking the Agent&rsquo;s Work</span><span class="wf-session-rule"></span></div>
 
-    <div class="wf-step wf-full wf-nocheck">
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">01</span>
+        <span class="wf-step-label">Read Your Page</span>
+      </div>
       <div class="wf-step-body">
-        <div class="wf-step-desc">The rest of this week&rsquo;s agenda is being written.</div>
+        <div class="wf-step-desc">Open your <code>username.github.io</code> folder in the Code tab and paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Open a preview of index.html. Then walk me through the file region
+by region: for each part I can see on the page, show me the HTML that
+makes it and the CSS that styles it. Keep each part short.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>You are learning to find things, not to write them: point at a line and say what it does.</li>
+        </ul>
       </div>
     </div>
 
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">02</span>
+        <span class="wf-step-label">Write the Spec</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Last week you described the page in words. Today you name the values. Paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Interview me, one question at a time, about the type, grid and color
+of my site. Use the terms from Graphic Design 101 and offer options
+with real values: font families, a size scale, column count and
+gutter, a palette of three to five named hex colors. Then write
+tasks/02-type-grid-color.md with every value I chose.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>&ldquo;Clean&rdquo; cannot be checked. &ldquo;Body 18px, line height 1.6, color #222&rdquo; can.</li>
+          <li>Show Claude a site whose type you admire as an example.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">03</span>
+        <span class="wf-step-label">Apply It and Read the Diff</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Do tasks/02-type-grid-color.md. Do not push yet. When you are done,
+show me the diff and explain each change in one line.</pre>
+        </div>
+        <div class="wf-step-desc">A diff lists each file that changed: lines removed in red, lines added in green. Read it against the spec, then look at the preview.</div>
+        <div class="ws-predict">
+          <strong>Before you approve</strong>
+          <span>Find one value from the spec in the diff, such as one hex color. If it is missing, Claude skipped it.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">04</span>
+        <span class="wf-step-label">A Check That Passes or Fails</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">&ldquo;Looks good&rdquo; is not a check. Ask for one that can fail:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Write a checklist from tasks/02-type-grid-color.md, one line per
+value, each marked pass or fail. Run it against the site: read the
+CSS, open the preview at desktop and phone width, and give me the
+evidence for each line. Keep the checklist in the task file.</pre>
+        </div>
+        <ul class="wf-tips">
+          <li>Evidence is the line of CSS or a screenshot, not a sentence about it.</li>
+          <li>Kept in the task file, the checklist can be run again after every change.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">05</span>
+        <span class="wf-step-label">A Second Session Reviews</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="wf-step-desc">Start a fresh session in the same folder and paste:</div>
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Review the site against the checklist in tasks/02-type-grid-color.md.
+You did not build it. Report each line pass or fail with evidence,
+and list anything the spec asks for that the site does not do.</pre>
+        </div>
+        <div class="ws-predict">
+          <strong>Why a new session</strong>
+          <span>It never saw the first session&rsquo;s reasoning, so it judges the result, not the intention.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">06</span>
+        <span class="wf-step-label">Push and Check Live</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Fix what failed, then commit and push.</pre>
+        </div>
+        <div class="wf-step-desc">Open <code>https://username.github.io</code> on your laptop and your phone and compare it with the preview.</div>
+        <ul class="wf-tips">
+          <li>The live site can take a minute or two to update. A hard refresh (Ctrl+Shift+R, or Cmd+Shift+R on a Mac) loads the new version.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-step wf-full">
+      <div class="wf-step-head">
+        <span class="wf-step-num">07</span>
+        <span class="wf-step-label">Hand It In</span>
+      </div>
+      <div class="wf-step-body">
+        <div class="ws-code">
+          <span class="ws-code__label">prompt to Claude</span>
+          <pre>Move the task to tasks/done/. Tag the latest commit week-03 and push the tag.</pre>
+        </div>
+        <div class="wf-step-desc">Give the link to the instructor. It will be opened in class.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Feeds forward -->
+  <div class="wf-ongoing">
+    <strong>Feeds forward</strong><span>Next week the values in this spec become your design system: rules every later page follows.</span>
   </div>
 
 </div>
