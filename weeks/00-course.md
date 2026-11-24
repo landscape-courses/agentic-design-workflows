@@ -14,6 +14,10 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   goes); a second session reviews; CLAUDE.md as a short map; skills from a finished job; effort and
   /clear. Proposed: a "How to brief Claude" section in Week 1, with its later moves cited in Weeks 3–6.
 
+- 2026-11-24: A Claude Code 101 page of plain facts, for example: every message resends the whole
+  conversation, so long sessions burn tokens fast and /clear or a fresh session resets it. Placement and
+  the fact list are open.
+
 ## Decided
 - Part I, one way of working with an agent per week: First Session · Context through Folders ·
   Checking the Agent's Work · Standards the Agent Follows · Managing Agents · Skills · Aligning with Claude.
