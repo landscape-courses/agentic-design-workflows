@@ -144,6 +144,8 @@
 .wf-objectives p { margin: 0 0 8px; max-width: 64ch; }
 /* ── Ongoing work: a semester-long deliverable this workflow feeds, directly under the assignment ── */
 .wf-ongoing { margin: -16px 0 28px; }
+/* closing box after the steps: clear the last step's rule instead of overlapping it */
+.wf-steps + .wf-ongoing { margin-top: 24px; }
 .wf-ongoing > strong { color: var(--accent); }
 .wf-ongoing p { margin: 0; }
 .wf-ongoing p + p { margin-top: 4px; }
