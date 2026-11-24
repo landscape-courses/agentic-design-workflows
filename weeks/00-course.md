@@ -27,12 +27,6 @@ Pre-semester prep for Spring 2027. Sections as in `CLAUDE.md`, "How prep works".
   with the video as a reference link and no section of its own.
 
 ## To build
-- Claude Code 101 page in `reference/`, added to the Reference section of every page's nav.
-- Week 1: a goal becomes a brief (what and why, the quality bar with examples, tools, freedom to
-  replan, the check, where it goes); asking Claude to interview you and show a plan first.
-- Week 2: memory. Claude writes its own notes as you correct it (auto-memory, on by default); students
-  open them, read them, and delete or move into CLAUDE.md what belongs there. CLAUDE.md stays a short
-  map pointing to small files, each fact in one place.
 - Weeks 3 to 6 pages, each from its week file.
 - A school-submission PDF of the syllabus, when asked for: `_tools/docx/syllabus_to_docx.py` in the
   local `landscape-courses` folder is set up for LAAR 61400 and needs this course's `COURSE` block.

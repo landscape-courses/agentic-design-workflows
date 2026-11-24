@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code 101 — Arch 51580</title>
+  <link rel="stylesheet" href="/agentic-design-workflows/assets/css/main.css">
+  <link rel="stylesheet" href="/agentic-design-workflows/assets/css/workflow-shared.css">
+  <style>
+    /* copy-paste code block. No line numbers and no decoration inside <pre>:
+       whatever is in there is exactly what lands on the student's clipboard. */
+    .ws-code{position:relative;border:1px solid var(--line);border-radius:6px;background:var(--gray-100);
+      padding:14px 16px;margin:12px 0 4px;overflow-x:auto;}
+    .ws-code pre{margin:0;font:400 13.5px/1.75 var(--font-mono);color:var(--gray-900);white-space:pre;}
+    .ws-code__label{display:block;font:700 10px/1 var(--font-mono);letter-spacing:.12em;
+      text-transform:uppercase;color:var(--gray-500);margin-bottom:9px;padding-right:70px;}
+    .ws-copy{position:absolute;top:9px;right:9px;appearance:none;cursor:pointer;
+      border:1px solid var(--line);background:#fff;color:var(--gray-700);border-radius:999px;
+      font:600 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;
+      padding:7px 11px;transition:.15s;}
+    .ws-copy:hover{border-color:var(--accent);color:var(--accent);}
+    .ws-copy.is-done{background:var(--accent);border-color:var(--accent);color:#fff;}
+    /* the predict-first box */
+    .ws-predict{border:1px solid var(--accent);border-left-width:4px;border-radius:6px;
+      background:color-mix(in srgb, var(--accent) 5%, transparent);padding:15px 18px;margin:14px 0;}
+    .ws-predict strong{display:block;font-size:14px;color:var(--ink);margin-bottom:5px;}
+    .ws-predict span{font-size:14px;line-height:1.65;color:var(--gray-750,#374151);}
+  </style>
+</head>
+<body>
+
+  <!-- Side panel -->
+  <nav id="sidepanel">
+    <a class="panel-brand" href="/agentic-design-workflows/index.html">
+      <span class="panel-brand-title">Arch 51580</span>
+      <span class="panel-brand-sub">Agentic Design Workflows</span>
+    </a>
+    <div class="panel-section">
+      <span class="panel-section-label">Lectures</span>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/computational-thinking.html">A History of Computational Thinking</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/web-coding-literacy.html">Web Coding Literacy</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/cybernetics-and-design.html">Cybernetics and Design</a>
+      <a class="panel-link" href="/agentic-design-workflows/lectures/graphic-design-101.html">Graphic Design 101</a>
+    </div>
+    <div class="panel-section">
+      <span class="panel-section-label">Weeks</span>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/github-setup.html"><span class="panel-link-num">01</span>First Session</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/folders-and-claude.html"><span class="panel-link-num">02</span>Context through Folders</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/website-made-of.html"><span class="panel-link-num">03</span>Checking the Agent's Work</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/context-is-design.html"><span class="panel-link-num">04</span>Standards the Agent Follows</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/design-and-build.html"><span class="panel-link-num">05</span>Managing Agents</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/skills.html"><span class="panel-link-num">06</span>Skills and Cloud Sessions</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/folder-audit.html"><span class="panel-link-num">07</span>Aligning with Claude</a>
+      <a class="panel-link" href="/agentic-design-workflows/workshops/build-your-tool.html"><span class="panel-link-num">08–14</span>Build Your Own Tool</a>
+    </div>
+    <div class="panel-section">
+      <span class="panel-section-label">Reference</span>
+      <a class="panel-link" href="https://zihaozhang.cc/talks/agents-in-practice/" target="_blank" rel="noopener">Agents in Practice &#8599;</a>
+      <a class="panel-link" href="https://www.anthropic.com/learn" target="_blank" rel="noopener">Anthropic Academy &#8599;</a>
+      <a class="panel-link active" href="/agentic-design-workflows/reference/claude-code-101.html">Claude Code 101</a>
+      <a class="panel-link" href="https://zihaozhang.cc/talks/agents-in-practice/" target="_blank" rel="noopener">Agents in Practice &#8599;</a>
+      <a class="panel-link" href="https://www.anthropic.com/learn" target="_blank" rel="noopener">Anthropic Academy &#8599;</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <div class="page-inner">
+<div class="wf-wrap wf-doc">
+
+  <!-- Header -->
+  <div class="wf-header">
+    <div class="wf-index">REFERENCE</div>
+    <div class="wf-header-text">
+      <div class="wf-title">Claude Code 101</div>
+      <div class="wf-subtitle">Plain facts about how Claude Code works &middot; added to through the semester</div>
+    </div>
+  </div>
+
+  <div style="background:var(--gray-100); border-radius:4px; padding:16px 18px; margin-bottom:28px;">
+    <div class="wf-step-desc">Each fact here explains something you will see the agent do. Read the list once now and come back when something surprises you. New facts are added as the course reaches them.</div>
+  </div>
+
+  <div class="wf-steps">
+
+    <div class="wf-session"><span class="wf-session-num">TOKENS</span><span class="wf-session-label">Where Your Usage Goes</span><span class="wf-session-rule"></span></div>
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <ul class="wf-tips">
+          <li><strong>Every message resends the whole conversation.</strong> Turn 40 costs far more than turn 4, because Claude reads all 39 turns before it again. A long session burns tokens quickly.</li>
+          <li><strong>A pause makes the next message cost more.</strong> For a short while Claude can reuse what it already read at a discount. After a long break it rereads the whole conversation at full price.</li>
+          <li><strong>Start fresh when you switch tasks.</strong> Type <code>/clear</code> or open a new session. Anything worth keeping belongs in a file, so a fresh session loses nothing.</li>
+          <li><strong>Your plan refills on two clocks:</strong> a five-hour window from your first message, and a weekly limit. Both are on the usage page in the app&rsquo;s settings.</li>
+          <li><strong>Point instead of pasting.</strong> Naming a file lets Claude read only what it needs. Pasting puts the whole text into every later turn.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-session"><span class="wf-session-num">CONTEXT</span><span class="wf-session-label">What Claude Knows</span><span class="wf-session-rule"></span></div>
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <ul class="wf-tips">
+          <li><strong>Every session starts blank.</strong> Claude knows what is in the folder and nothing from your last conversation.</li>
+          <li><strong>CLAUDE.md is read at the start of every session.</strong> Keep it short, a map that points to other files. Each fact lives in one place, so it can never disagree with itself.</li>
+          <li><strong>Claude keeps its own memory.</strong> When you correct it, it may save a note for next time. This is on by default. Type <code>/memory</code> to open the notes, read them, and delete what is wrong.</li>
+          <li><strong>A new session is a fresh pair of eyes.</strong> It never saw the first session&rsquo;s reasoning, which makes it a good reviewer of that session&rsquo;s work.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wf-session"><span class="wf-session-num">CONTROL</span><span class="wf-session-label">How Claude Works</span><span class="wf-session-rule"></span></div>
+    <div class="wf-step wf-full wf-nocheck">
+      <div class="wf-step-body">
+        <ul class="wf-tips">
+          <li><strong>Auto is the default permission mode.</strong> Claude goes ahead with ordinary work and stops to ask before anything risky. Keep it on auto in this course.</li>
+          <li><strong>Talk to it like a co-worker.</strong> A goal, why it matters, what good looks like, and how to check it beats a long list of rules.</li>
+          <li><strong>Effort sets how hard Claude thinks before answering.</strong> Low is fast and cheap for quick back-and-forth. Raise it when a mistake would be easy to miss. Build on low, check on high.</li>
+          <li><strong>A skill is a saved procedure.</strong> It is a folder holding a <code>SKILL.md</code> file, loaded only when its job comes up. Type <code>/</code> to see the ones you have.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="wf-ongoing">
+    <strong>Further viewing</strong><span><a href="https://www.youtube.com/watch?v=Jz4QT0vH-MU" target="_blank" rel="noopener">&ldquo;Give Me 10 Minutes and I&rsquo;ll Make Claude Code 100x Smarter&rdquo; &#8599;</a>, a video on briefs, checks, memory, skills and effort.</span>
+  </div>
+
+</div>
+    </div>
+  </main>
+
+  <script src="/agentic-design-workflows/assets/js/nav.js"></script>
+</body>
+</html>
